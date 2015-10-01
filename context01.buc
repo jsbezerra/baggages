@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1443712436737" org.eventb.texttools.text_representation="context context01&#10;&#10;sets Baggages&#10;&#10;axioms&#10;&#9;@infiniteBaggages ¬finite(Baggages)&#10;&#10;end&#10;" version="3">
+<org.eventb.core.carrierSet name="_CQBVMGhPEeWccdfwySTGIg" org.eventb.core.identifier="Baggages"/>
+<org.eventb.core.axiom name="_CQBVMWhPEeWccdfwySTGIg" org.eventb.core.label="infiniteBaggages" org.eventb.core.predicate="¬finite(Baggages)"/>
+</org.eventb.core.contextFile>

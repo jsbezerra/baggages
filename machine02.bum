@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1443717551595" org.eventb.texttools.text_representation="machine machine02 refines machine01 sees context01&#10;&#10;variables baggagesAtAirport deliveredBaggages notDeliveredBaggages&#10;&#10;invariants&#10;&#9;@typeDelBag deliveredBaggages ⊆ baggagesAtAirport&#10;&#9;@typeNotDelBag notDeliveredBaggages ⊆ baggagesAtAirport&#10;&#9;@inv2_01 deliveredBaggages ∪ notDeliveredBaggages = baggagesAtAirport&#10;&#9;@inv2_02 deliveredBaggages ∩ notDeliveredBaggages = ∅&#10;&#9;@inv2_03 ∀b · b ∈ Baggages ∧ b ∉ baggagesAtAirport ⇒ b ∉ deliveredBaggages ∧ b ∉ notDeliveredBaggages&#10;&#10;&#9;theorem @theo1 finite(deliveredBaggages)&#10;&#9;theorem @theo2 finite(notDeliveredBaggages)&#10;&#10;events&#10;&#10;  event INITIALISATION extends INITIALISATION&#10;  &#9;then&#10;  &#9;&#9;@initDel deliveredBaggages ≔ ∅&#10;  &#9;&#9;@initNotDel notDeliveredBaggages ≔ ∅&#10;  end&#10;&#10;  event ENTER_BAGGAGE&#10;  &#9;refines ENTER_BAGGAGE&#10;  &#9;any bag&#10;  &#9;where&#10;  &#9;&#9;@grd2_01 bag ∉ baggagesAtAirport&#10;  &#9;then&#10;  &#9;&#9;@act2_01 baggagesAtAirport ≔ baggagesAtAirport ∪ {bag}&#10;  &#9;&#9;@act2_02 notDeliveredBaggages ≔ notDeliveredBaggages ∪ {bag}&#10;  end&#10;&#10;  event DELIVER&#10;  any bag&#10;  where&#10;  &#9;@grd2_01 bag ∈ notDeliveredBaggages&#10;  then&#10;  &#9;@act2_01 deliveredBaggages ≔ deliveredBaggages ∪ {bag}&#10;  &#9;@act2_02 notDeliveredBaggages ≔ notDeliveredBaggages  ∖ {bag}&#10;  end&#10;&#10;&#10;  event EXIT_DELIVERED_BAGGAGE&#10;  &#9;refines EXIT_BAGGAGE&#10;  &#9;any bag&#10;  &#9;where&#10;  &#9;&#9;@grd2_01 bag ∈ deliveredBaggages&#10;  &#9;then&#10;  &#9;&#9;@act2_01 baggagesAtAirport ≔ baggagesAtAirport ∖ {bag}&#10;  &#9;&#9;@act2_02 deliveredBaggages ≔ deliveredBaggages ∖ {bag}&#10;  end&#10;&#10;  event EXIT_NOT_DELIVERED_BAGGAGE&#10;  &#9;refines EXIT_BAGGAGE&#10;  &#9;any bag&#10;  &#9;where&#10;  &#9;&#9;@grd2_01 bag ∈ notDeliveredBaggages&#10;  &#9;then&#10;  &#9;&#9;@act2_01 baggagesAtAirport ≔ baggagesAtAirport ∖ {bag}&#10;  &#9;&#9;@act2_02 notDeliveredBaggages ≔ notDeliveredBaggages ∖ {bag}&#10;  end&#10;&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="_CWdpgGhREeWccdfwySTGIg" org.eventb.core.target="machine01"/>
+<org.eventb.core.seesContext name="_GT_PAGhREeWccdfwySTGIg" org.eventb.core.target="context01"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_xZ5lQGhREeWccdfwySTGIg" org.eventb.core.assignment="deliveredBaggages ≔ ∅" org.eventb.core.label="initDel"/>
+<org.eventb.core.action name="_6NaCQGhREeWccdfwySTGIg" org.eventb.core.assignment="notDeliveredBaggages ≔ ∅" org.eventb.core.label="initNotDel"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_PtbDkGhREeWccdfwySTGIg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ENTER_BAGGAGE">
+<org.eventb.core.refinesEvent name="_X4p_oGhREeWccdfwySTGIg" org.eventb.core.target="ENTER_BAGGAGE"/>
+<org.eventb.core.parameter name="_QtZdYGhSEeWccdfwySTGIg" org.eventb.core.identifier="bag"/>
+<org.eventb.core.guard name="_QtZdYWhSEeWccdfwySTGIg" org.eventb.core.label="grd2_01" org.eventb.core.predicate="bag ∉ baggagesAtAirport"/>
+<org.eventb.core.action name="_QtaEcGhSEeWccdfwySTGIg" org.eventb.core.assignment="baggagesAtAirport ≔ baggagesAtAirport ∪ {bag}" org.eventb.core.label="act2_01"/>
+<org.eventb.core.action name="_tIGjcGhSEeWccdfwySTGIg" org.eventb.core.assignment="notDeliveredBaggages ≔ notDeliveredBaggages ∪ {bag}" org.eventb.core.label="act2_02"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_PtbDkWhREeWccdfwySTGIg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="DELIVER">
+<org.eventb.core.parameter name="_k9jucGhTEeWccdfwySTGIg" org.eventb.core.identifier="bag"/>
+<org.eventb.core.guard name="_k9jucWhTEeWccdfwySTGIg" org.eventb.core.label="grd2_01" org.eventb.core.predicate="bag ∈ notDeliveredBaggages"/>
+<org.eventb.core.action name="_k9jucmhTEeWccdfwySTGIg" org.eventb.core.assignment="deliveredBaggages ≔ deliveredBaggages ∪ {bag}" org.eventb.core.label="act2_01"/>
+<org.eventb.core.action name="_k9juc2hTEeWccdfwySTGIg" org.eventb.core.assignment="notDeliveredBaggages ≔ notDeliveredBaggages  ∖ {bag}" org.eventb.core.label="act2_02"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_ijaSIGhREeWccdfwySTGIg" org.eventb.core.identifier="baggagesAtAirport"/>
+<org.eventb.core.variable name="_ijaSIWhREeWccdfwySTGIg" org.eventb.core.identifier="deliveredBaggages"/>
+<org.eventb.core.invariant name="_qRWOMGhREeWccdfwySTGIg" org.eventb.core.label="typeDelBag" org.eventb.core.predicate="deliveredBaggages ⊆ baggagesAtAirport"/>
+<org.eventb.core.invariant name="_qRWOMWhREeWccdfwySTGIg" org.eventb.core.label="typeNotDelBag" org.eventb.core.predicate="notDeliveredBaggages ⊆ baggagesAtAirport"/>
+<org.eventb.core.variable name="_4O6VQGhREeWccdfwySTGIg" org.eventb.core.identifier="notDeliveredBaggages"/>
+<org.eventb.core.invariant name="_YOJSAGhSEeWccdfwySTGIg" org.eventb.core.label="inv2_01" org.eventb.core.predicate="deliveredBaggages ∪ notDeliveredBaggages = baggagesAtAirport"/>
+<org.eventb.core.invariant name="_YOJSAWhSEeWccdfwySTGIg" org.eventb.core.label="inv2_02" org.eventb.core.predicate="deliveredBaggages ∩ notDeliveredBaggages = ∅"/>
+<org.eventb.core.invariant name="_gIRP8GhSEeWccdfwySTGIg" org.eventb.core.label="inv2_03" org.eventb.core.predicate="∀b · b ∈ Baggages ∧ b ∉ baggagesAtAirport ⇒ b ∉ deliveredBaggages ∧ b ∉ notDeliveredBaggages"/>
+<org.eventb.core.invariant name="_iUwVoGhSEeWccdfwySTGIg" org.eventb.core.label="theo1" org.eventb.core.predicate="finite(deliveredBaggages)" org.eventb.core.theorem="true"/>
+<org.eventb.core.event name="_CL_-kGhUEeWccdfwySTGIg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="EXIT_DELIVERED_BAGGAGE">
+<org.eventb.core.refinesEvent name="_CL_-kWhUEeWccdfwySTGIg" org.eventb.core.target="EXIT_BAGGAGE"/>
+<org.eventb.core.parameter name="_CL_-kmhUEeWccdfwySTGIg" org.eventb.core.identifier="bag"/>
+<org.eventb.core.guard name="_CL_-k2hUEeWccdfwySTGIg" org.eventb.core.label="grd2_01" org.eventb.core.predicate="bag ∈ deliveredBaggages"/>
+<org.eventb.core.action name="_CL_-lGhUEeWccdfwySTGIg" org.eventb.core.assignment="baggagesAtAirport ≔ baggagesAtAirport ∖ {bag}" org.eventb.core.label="act2_01"/>
+<org.eventb.core.action name="_CL_-lWhUEeWccdfwySTGIg" org.eventb.core.assignment="deliveredBaggages ≔ deliveredBaggages ∖ {bag}" org.eventb.core.label="act2_02"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_SfxIAGhUEeWccdfwySTGIg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="EXIT_NOT_DELIVERED_BAGGAGE">
+<org.eventb.core.refinesEvent name="_SfxIAWhUEeWccdfwySTGIg" org.eventb.core.target="EXIT_BAGGAGE"/>
+<org.eventb.core.parameter name="_SfxIAmhUEeWccdfwySTGIg" org.eventb.core.identifier="bag"/>
+<org.eventb.core.guard name="_L5diYGhUEeWccdfwySTGIg" org.eventb.core.label="grd2_01" org.eventb.core.predicate="bag ∈ notDeliveredBaggages"/>
+<org.eventb.core.action name="_SfxIBWhUEeWccdfwySTGIg" org.eventb.core.assignment="baggagesAtAirport ≔ baggagesAtAirport ∖ {bag}" org.eventb.core.label="act2_01"/>
+<org.eventb.core.action name="_SfxIBmhUEeWccdfwySTGIg" org.eventb.core.assignment="notDeliveredBaggages ≔ notDeliveredBaggages ∖ {bag}" org.eventb.core.label="act2_02"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="_8bLyUGhaEeWccdfwySTGIg" org.eventb.core.label="theo2" org.eventb.core.predicate="finite(notDeliveredBaggages)" org.eventb.core.theorem="true"/>
+</org.eventb.core.machineFile>
