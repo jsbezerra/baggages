@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1444062043795" org.eventb.texttools.text_representation="machine machine05 refines machine04 sees context05&#10;&#10;variables baggagesAtAirport deliveredBaggages notDeliveredBaggages inspectedBaggages notInspectedBaggages&#10;&#9;inspectionApproved inspectionDisapproved&#10;&#10;events&#10;&#10;  event INITIALISATION extends INITIALISATION&#10;&#10;  end&#10;&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="_7tti4Gt8EeWvl-5rHAeKDQ" org.eventb.core.target="machine04"/>
+<org.eventb.core.seesContext name="_7tti4Wt8EeWvl-5rHAeKDQ" org.eventb.core.target="context05"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.variable name="_Ac8SIGt9EeWvl-5rHAeKDQ" org.eventb.core.identifier="baggagesAtAirport"/>
+<org.eventb.core.variable name="_Ac8SIWt9EeWvl-5rHAeKDQ" org.eventb.core.identifier="deliveredBaggages"/>
+<org.eventb.core.variable name="_Ac85MGt9EeWvl-5rHAeKDQ" org.eventb.core.identifier="notDeliveredBaggages"/>
+<org.eventb.core.variable name="_Ac85MWt9EeWvl-5rHAeKDQ" org.eventb.core.identifier="inspectedBaggages"/>
+<org.eventb.core.variable name="_Ac85Mmt9EeWvl-5rHAeKDQ" org.eventb.core.identifier="notInspectedBaggages"/>
+<org.eventb.core.variable name="_Ac85M2t9EeWvl-5rHAeKDQ" org.eventb.core.identifier="inspectionApproved"/>
+<org.eventb.core.variable name="_Ac85NGt9EeWvl-5rHAeKDQ" org.eventb.core.identifier="inspectionDisapproved"/>
+</org.eventb.core.machineFile>

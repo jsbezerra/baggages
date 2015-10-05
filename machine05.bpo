@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="18">
+<org.eventb.core.poIdentifier name="Baggages" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.poPredicate name="Baggaget" org.eventb.core.predicate="¬finite(Baggages)" org.eventb.core.source="/baggages/context01.buc|org.eventb.core.contextFile#context01|org.eventb.core.axiom#_CQBVMWhPEeWccdfwySTGIg"/>
+<org.eventb.core.poIdentifier name="Airplanes" org.eventb.core.type="ℙ(Airplanes)"/>
+<org.eventb.core.poIdentifier name="Claim" org.eventb.core.type="ℙ(Claim)"/>
+<org.eventb.core.poIdentifier name="Counters" org.eventb.core.type="ℙ(Counters)"/>
+<org.eventb.core.poIdentifier name="Locations" org.eventb.core.type="ℙ(Locations)"/>
+<org.eventb.core.poIdentifier name="c1" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="c10" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="c11" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="c12" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="c13" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="c14" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="c15" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="c16" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="c2" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="c3" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="c4" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="c5" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="c6" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="c7" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="c8" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="c9" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="cl1" org.eventb.core.type="Claim"/>
+<org.eventb.core.poIdentifier name="cl2" org.eventb.core.type="Claim"/>
+<org.eventb.core.poIdentifier name="cl3" org.eventb.core.type="Claim"/>
+<org.eventb.core.poIdentifier name="cl4" org.eventb.core.type="Claim"/>
+<org.eventb.core.poIdentifier name="destination" org.eventb.core.type="ℙ(Baggages×Locations)"/>
+<org.eventb.core.poIdentifier name="source" org.eventb.core.type="ℙ(Baggages×Locations)"/>
+<org.eventb.core.poPredicate name="destinatioo" org.eventb.core.predicate="¬finite(Airplanes)" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_oai0oGtyEeWJd8bCiR6tag"/>
+<org.eventb.core.poPredicate name="destinatiop" org.eventb.core.predicate="Counters={c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16}" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_Nyz2IGt0EeWJd8bCiR6tag"/>
+<org.eventb.core.poPredicate name="destinatioq" org.eventb.core.predicate="finite(Counters)" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_RnSNUGt0EeWJd8bCiR6tag"/>
+<org.eventb.core.poPredicate name="destinatior" org.eventb.core.predicate="card(Counters)=16" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_VpZF8Gt2EeWvl-5rHAeKDQ"/>
+<org.eventb.core.poPredicate name="destinatios" org.eventb.core.predicate="Claim={cl1,cl2,cl3,cl4}" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_PYx_UGt9EeWvl-5rHAeKDQ"/>
+<org.eventb.core.poPredicate name="destinatiot" org.eventb.core.predicate="finite(Claim)" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_UKxusGt9EeWvl-5rHAeKDQ"/>
+<org.eventb.core.poPredicate name="destinatiou" org.eventb.core.predicate="card(Claim)=4" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_X5TCUWuSEeWvl-5rHAeKDQ"/>
+<org.eventb.core.poPredicate name="destinatiov" org.eventb.core.predicate="source∈Baggages → Locations" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_sYiGoGuSEeWvl-5rHAeKDQ"/>
+<org.eventb.core.poPredicate name="destinatiow" org.eventb.core.predicate="destination∈Baggages → Locations" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_sYitsGuSEeWvl-5rHAeKDQ"/>
+<org.eventb.core.poPredicate name="destinatiox" org.eventb.core.predicate="¬finite(Locations)" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_Nv76wGuUEeWvl-5rHAeKDQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/baggages/machine05.bpo|org.eventb.core.poFile#machine05|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="18">
+<org.eventb.core.poIdentifier name="baggagesAtAirport" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.poIdentifier name="deliveredBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.poIdentifier name="inspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.poIdentifier name="inspectionApproved" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.poIdentifier name="inspectionDisapproved" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.poIdentifier name="notDeliveredBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.poIdentifier name="notInspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.poPredicate name="inspectionDisapprovee" org.eventb.core.predicate="baggagesAtAirport⊆Baggages" org.eventb.core.source="/baggages/machine01.bum|org.eventb.core.machineFile#machine01|org.eventb.core.invariant#_O6yXoGhPEeWccdfwySTGIg"/>
+<org.eventb.core.poPredicate name="inspectionDisapprovef" org.eventb.core.predicate="finite(baggagesAtAirport)" org.eventb.core.source="/baggages/machine01.bum|org.eventb.core.machineFile#machine01|org.eventb.core.invariant#_exIv0GhQEeWccdfwySTGIg"/>
+<org.eventb.core.poPredicate name="inspectionDisapproveg" org.eventb.core.predicate="∀b⦂Baggages·b∈Baggages⇒b∈baggagesAtAirport∨b∉baggagesAtAirport" org.eventb.core.source="/baggages/machine01.bum|org.eventb.core.machineFile#machine01|org.eventb.core.invariant#_2AaS0GhQEeWccdfwySTGIg"/>
+<org.eventb.core.poPredicate name="inspectionDisapproveh" org.eventb.core.predicate="deliveredBaggages⊆baggagesAtAirport" org.eventb.core.source="/baggages/machine02.bum|org.eventb.core.machineFile#machine02|org.eventb.core.invariant#_qRWOMGhREeWccdfwySTGIg"/>
+<org.eventb.core.poPredicate name="inspectionDisapprovei" org.eventb.core.predicate="notDeliveredBaggages⊆baggagesAtAirport" org.eventb.core.source="/baggages/machine02.bum|org.eventb.core.machineFile#machine02|org.eventb.core.invariant#_qRWOMWhREeWccdfwySTGIg"/>
+<org.eventb.core.poPredicate name="inspectionDisapprovej" org.eventb.core.predicate="deliveredBaggages∪notDeliveredBaggages=baggagesAtAirport" org.eventb.core.source="/baggages/machine02.bum|org.eventb.core.machineFile#machine02|org.eventb.core.invariant#_YOJSAGhSEeWccdfwySTGIg"/>
+<org.eventb.core.poPredicate name="inspectionDisapprovek" org.eventb.core.predicate="deliveredBaggages∩notDeliveredBaggages=(∅ ⦂ ℙ(Baggages))" org.eventb.core.source="/baggages/machine02.bum|org.eventb.core.machineFile#machine02|org.eventb.core.invariant#_YOJSAWhSEeWccdfwySTGIg"/>
+<org.eventb.core.poPredicate name="inspectionDisapprovel" org.eventb.core.predicate="∀b⦂Baggages·b∈Baggages∧b∉baggagesAtAirport⇒b∉deliveredBaggages∧b∉notDeliveredBaggages" org.eventb.core.source="/baggages/machine02.bum|org.eventb.core.machineFile#machine02|org.eventb.core.invariant#_gIRP8GhSEeWccdfwySTGIg"/>
+<org.eventb.core.poPredicate name="inspectionDisapprovem" org.eventb.core.predicate="finite(deliveredBaggages)" org.eventb.core.source="/baggages/machine02.bum|org.eventb.core.machineFile#machine02|org.eventb.core.invariant#_iUwVoGhSEeWccdfwySTGIg"/>
+<org.eventb.core.poPredicate name="inspectionDisapproven" org.eventb.core.predicate="finite(notDeliveredBaggages)" org.eventb.core.source="/baggages/machine02.bum|org.eventb.core.machineFile#machine02|org.eventb.core.invariant#_8bLyUGhaEeWccdfwySTGIg"/>
+<org.eventb.core.poPredicate name="inspectionDisapproveo" org.eventb.core.predicate="inspectedBaggages⊆baggagesAtAirport" org.eventb.core.source="/baggages/machine03.bum|org.eventb.core.machineFile#machine03|org.eventb.core.invariant#_kL5WEGhVEeWccdfwySTGIg"/>
+<org.eventb.core.poPredicate name="inspectionDisapprovep" org.eventb.core.predicate="notInspectedBaggages⊆baggagesAtAirport" org.eventb.core.source="/baggages/machine03.bum|org.eventb.core.machineFile#machine03|org.eventb.core.invariant#_kL5WEWhVEeWccdfwySTGIg"/>
+<org.eventb.core.poPredicate name="inspectionDisapproveq" org.eventb.core.predicate="inspectedBaggages∪notInspectedBaggages=baggagesAtAirport" org.eventb.core.source="/baggages/machine03.bum|org.eventb.core.machineFile#machine03|org.eventb.core.invariant#__TFl0GhVEeWccdfwySTGIg"/>
+<org.eventb.core.poPredicate name="inspectionDisapprover" org.eventb.core.predicate="inspectedBaggages∩notInspectedBaggages=(∅ ⦂ ℙ(Baggages))" org.eventb.core.source="/baggages/machine03.bum|org.eventb.core.machineFile#machine03|org.eventb.core.invariant#_DLqZ4GhWEeWccdfwySTGIg"/>
+<org.eventb.core.poPredicate name="inspectionDisapproves" org.eventb.core.predicate="∀b⦂Baggages·b∈deliveredBaggages⇒b∈inspectedBaggages" org.eventb.core.source="/baggages/machine03.bum|org.eventb.core.machineFile#machine03|org.eventb.core.invariant#_ivKAYGhXEeWccdfwySTGIg"/>
+<org.eventb.core.poPredicate name="inspectionDisapprovet" org.eventb.core.predicate="∀b⦂Baggages·b∈Baggages∧b∉baggagesAtAirport⇒b∉inspectedBaggages∧b∉notInspectedBaggages" org.eventb.core.source="/baggages/machine03.bum|org.eventb.core.machineFile#machine03|org.eventb.core.invariant#_GM980GhYEeWccdfwySTGIg"/>
+<org.eventb.core.poPredicate name="inspectionDisapproveu" org.eventb.core.predicate="∀b⦂Baggages·b∉inspectedBaggages⇒b∉deliveredBaggages" org.eventb.core.source="/baggages/machine03.bum|org.eventb.core.machineFile#machine03|org.eventb.core.invariant#_vdebMGhZEeWccdfwySTGIg"/>
+<org.eventb.core.poPredicate name="inspectionDisapprovev" org.eventb.core.predicate="inspectedBaggages=(∅ ⦂ ℙ(Baggages))⇒deliveredBaggages=(∅ ⦂ ℙ(Baggages))" org.eventb.core.source="/baggages/machine03.bum|org.eventb.core.machineFile#machine03|org.eventb.core.invariant#_hX-OMGhbEeWccdfwySTGIg"/>
+<org.eventb.core.poPredicate name="inspectionDisapprovew" org.eventb.core.predicate="inspectionApproved⊆inspectedBaggages" org.eventb.core.source="/baggages/machine04.bum|org.eventb.core.machineFile#machine04|org.eventb.core.invariant#_2v3HoGtiEeWJd8bCiR6tag"/>
+<org.eventb.core.poPredicate name="inspectionDisapprovex" org.eventb.core.predicate="inspectionDisapproved⊆inspectedBaggages" org.eventb.core.source="/baggages/machine04.bum|org.eventb.core.machineFile#machine04|org.eventb.core.invariant#_2v3usGtiEeWJd8bCiR6tag"/>
+<org.eventb.core.poPredicate name="inspectionDisapprovey" org.eventb.core.predicate="inspectionApproved∪inspectionDisapproved=inspectedBaggages" org.eventb.core.source="/baggages/machine04.bum|org.eventb.core.machineFile#machine04|org.eventb.core.invariant#__VxYEGtjEeWJd8bCiR6tag"/>
+<org.eventb.core.poPredicate name="inspectionDisapprovez" org.eventb.core.predicate="inspectionApproved∩inspectionDisapproved=(∅ ⦂ ℙ(Baggages))" org.eventb.core.source="/baggages/machine04.bum|org.eventb.core.machineFile#machine04|org.eventb.core.invariant#__VxYEWtjEeWJd8bCiR6tag"/>
+<org.eventb.core.poPredicate name="inspectionDisapprove{" org.eventb.core.predicate="∀b⦂Baggages·b∈deliveredBaggages⇒b∈inspectionApproved" org.eventb.core.source="/baggages/machine04.bum|org.eventb.core.machineFile#machine04|org.eventb.core.invariant#_azM9kGtkEeWJd8bCiR6tag"/>
+<org.eventb.core.poPredicate name="inspectionDisapprove|" org.eventb.core.predicate="∀b⦂Baggages·b∈inspectionDisapproved⇒b∉deliveredBaggages" org.eventb.core.source="/baggages/machine04.bum|org.eventb.core.machineFile#machine04|org.eventb.core.invariant#_DledQGtlEeWJd8bCiR6tag"/>
+<org.eventb.core.poPredicate name="inspectionDisapprove}" org.eventb.core.predicate="∀b⦂Baggages·b∈inspectionDisapproved⇒b∈notDeliveredBaggages" org.eventb.core.source="/baggages/machine04.bum|org.eventb.core.machineFile#machine04|org.eventb.core.invariant#_BoDR0GtmEeWJd8bCiR6tag"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTinspectionDisapprovee" org.eventb.core.parentSet="/baggages/machine05.bpo|org.eventb.core.poFile#machine05|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="18">
+<org.eventb.core.poIdentifier name="notInspectedBaggages'" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.poIdentifier name="inspectionDisapproved'" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.poIdentifier name="inspectionApproved'" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.poIdentifier name="notDeliveredBaggages'" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.poIdentifier name="baggagesAtAirport'" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.poIdentifier name="inspectedBaggages'" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.poIdentifier name="deliveredBaggages'" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPinspectionDisapprovee" org.eventb.core.parentSet="/baggages/machine05.bpo|org.eventb.core.poFile#machine05|org.eventb.core.poPredicateSet#EVTIDENTinspectionDisapprovee" org.eventb.core.poStamp="18"/>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/baggages/machine05.bpo|org.eventb.core.poFile#machine05|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="18"/>
+</org.eventb.core.poFile>

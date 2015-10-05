@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="24">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="21">
+<org.eventb.core.poIdentifier name="Baggages" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.poPredicate name="Baggaget" org.eventb.core.predicate="¬finite(Baggages)" org.eventb.core.source="/baggages/context01.buc|org.eventb.core.contextFile#context01|org.eventb.core.axiom#_CQBVMWhPEeWccdfwySTGIg"/>
+<org.eventb.core.poIdentifier name="Airplanes" org.eventb.core.type="ℙ(Airplanes)"/>
+<org.eventb.core.poIdentifier name="Claim" org.eventb.core.type="ℙ(Claim)"/>
+<org.eventb.core.poIdentifier name="Counters" org.eventb.core.type="ℙ(Counters)"/>
+<org.eventb.core.poIdentifier name="Locations" org.eventb.core.type="ℙ(Locations)"/>
+<org.eventb.core.poIdentifier name="c1" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="c10" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="c11" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="c12" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="c13" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="c14" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="c15" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="c16" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="c2" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="c3" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="c4" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="c5" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="c6" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="c7" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="c8" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="c9" org.eventb.core.type="Counters"/>
+<org.eventb.core.poIdentifier name="cl1" org.eventb.core.type="Claim"/>
+<org.eventb.core.poIdentifier name="cl2" org.eventb.core.type="Claim"/>
+<org.eventb.core.poIdentifier name="cl3" org.eventb.core.type="Claim"/>
+<org.eventb.core.poIdentifier name="cl4" org.eventb.core.type="Claim"/>
+<org.eventb.core.poIdentifier name="destination" org.eventb.core.type="ℙ(Baggages×Locations)"/>
+<org.eventb.core.poIdentifier name="source" org.eventb.core.type="ℙ(Baggages×Locations)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="cardCounters/WD" org.eventb.core.accurate="false" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/baggages/context05.bpo|org.eventb.core.poFile#context05|org.eventb.core.poPredicateSet#HYPcontext04"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(Counters)" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_VpZF8Gt2EeWvl-5rHAeKDQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_VpZF8Gt2EeWvl-5rHAeKDQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/baggages/context05.bpo|org.eventb.core.poFile#context05|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/baggages/context05.bpo|org.eventb.core.poFile#context05|org.eventb.core.poPredicateSet#HYPcontext04"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="cardClaim/WD" org.eventb.core.accurate="false" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/baggages/context05.bpo|org.eventb.core.poFile#context05|org.eventb.core.poPredicateSet#HYPcontext07"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(Claim)" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_X5TCUWuSEeWvl-5rHAeKDQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_X5TCUWuSEeWvl-5rHAeKDQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/baggages/context05.bpo|org.eventb.core.poFile#context05|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/baggages/context05.bpo|org.eventb.core.poFile#context05|org.eventb.core.poPredicateSet#HYPcontext07"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="HYPcontext04" org.eventb.core.parentSet="/baggages/context05.bpo|org.eventb.core.poFile#context05|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="¬finite(Airplanes)" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_oai0oGtyEeWJd8bCiR6tag"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Counters={c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16}" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_Nyz2IGt0EeWJd8bCiR6tag"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="finite(Counters)" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_RnSNUGt0EeWJd8bCiR6tag"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPcontext07" org.eventb.core.parentSet="/baggages/context05.bpo|org.eventb.core.poFile#context05|org.eventb.core.poPredicateSet#HYPcontext04" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="card(Counters)=16" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_VpZF8Gt2EeWvl-5rHAeKDQ"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="Claim={cl1,cl2,cl3,cl4}" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_PYx_UGt9EeWvl-5rHAeKDQ"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="finite(Claim)" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_UKxusGt9EeWvl-5rHAeKDQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/baggages/context05.bpo|org.eventb.core.poFile#context05|org.eventb.core.poPredicateSet#HYPcontext07" org.eventb.core.poStamp="24">
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="card(Claim)=4" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_X5TCUWuSEeWvl-5rHAeKDQ"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="source∈Baggages → Locations" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_sYiGoGuSEeWvl-5rHAeKDQ"/>
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="destination∈Baggages → Locations" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_sYitsGuSEeWvl-5rHAeKDQ"/>
+<org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="¬finite(Locations)" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_Nv76wGuUEeWvl-5rHAeKDQ"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>
