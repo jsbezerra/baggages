@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1444062043795" org.eventb.texttools.text_representation="machine machine05 refines machine04 sees context05&#10;&#10;variables baggagesAtAirport deliveredBaggages notDeliveredBaggages inspectedBaggages notInspectedBaggages&#10;&#9;inspectionApproved inspectionDisapproved&#10;&#10;events&#10;&#10;  event INITIALISATION extends INITIALISATION&#10;&#10;  end&#10;&#10;end&#10;" version="5">
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1444073931416" org.eventb.texttools.text_representation="machine machine05 refines machine04 sees context05&#10;&#10;variables baggagesAtAirport deliveredBaggages notDeliveredBaggages inspectedBaggages notInspectedBaggages&#10;&#9;inspectionApproved inspectionDisapproved&#10;&#10;&#9;airplanesAtAirport&#10;&#10;invariants&#10;&#9;@defAirplane airplanesAtAirport ⊆ Airplanes&#10;&#9;@finiteAirplanes finite(airplanesAtAirport)&#10;&#9;@cardAirplanes card(airplanesAtAirport) ≤ 4&#10;&#10;events&#10;&#10;  event INITIALISATION&#10;  &#9;extends INITIALISATION&#10;&#9;then&#10;&#9;&#9;@initAirplanes airplanesAtAirport ≔ ∅&#10;  end&#10;&#10;  event ENTER_BAGGAGE extends ENTER_BAGGAGE&#10;  end&#10;&#10;  event INSPECT_APPROVE extends INSPECT_APPROVE&#10;  end&#10;&#10;  event INSPECT_DISAPPROVE extends INSPECT_DISAPPROVE&#10;  end&#10;&#10;  event DELIVER extends DELIVER&#10;  end&#10;&#10;  event EXIT_DELIVERED_BAGGAGE&#10;  &#9;extends EXIT_DELIVERED_BAGGAGE&#10;  end&#10;&#10;  event EXIT_NOT_DELIVERED_BAGGAGE&#10;  &#9;extends EXIT_NOT_DELIVERED_BAGGAGE&#10;  end&#10;&#10;  event ENTER_AIRPLANE&#10;  &#9;any airplane&#10;  &#9;where&#10;  &#9;&#9;@grd5_01 airplane ∈ Airplanes&#10;  &#9;&#9;@grd5_02 airplane ∉ airplanesAtAirport&#10;  &#9;&#9;@grd5_03 card(airplanesAtAirport) &lt; 4&#10;  &#9;then&#10;  &#9;&#9;@act5_01 airplanesAtAirport ≔ airplanesAtAirport ∪ {airplane}&#10;  end&#10;&#10;  event EXIT_AIRPLANE&#10;  &#9;//refines EXIT_DELIVERED_BAGGAGE&#10;  end&#10;&#10;end&#10;" version="5">
 <org.eventb.core.refinesMachine name="_7tti4Gt8EeWvl-5rHAeKDQ" org.eventb.core.target="machine04"/>
 <org.eventb.core.seesContext name="_7tti4Wt8EeWvl-5rHAeKDQ" org.eventb.core.target="context05"/>
-<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_AHmAUGuVEeWvl-5rHAeKDQ" org.eventb.core.assignment="airplanesAtAirport ≔ ∅" org.eventb.core.label="initAirplanes"/>
+</org.eventb.core.event>
 <org.eventb.core.variable name="_Ac8SIGt9EeWvl-5rHAeKDQ" org.eventb.core.identifier="baggagesAtAirport"/>
 <org.eventb.core.variable name="_Ac8SIWt9EeWvl-5rHAeKDQ" org.eventb.core.identifier="deliveredBaggages"/>
 <org.eventb.core.variable name="_Ac85MGt9EeWvl-5rHAeKDQ" org.eventb.core.identifier="notDeliveredBaggages"/>
@@ -10,4 +12,34 @@
 <org.eventb.core.variable name="_Ac85Mmt9EeWvl-5rHAeKDQ" org.eventb.core.identifier="notInspectedBaggages"/>
 <org.eventb.core.variable name="_Ac85M2t9EeWvl-5rHAeKDQ" org.eventb.core.identifier="inspectionApproved"/>
 <org.eventb.core.variable name="_Ac85NGt9EeWvl-5rHAeKDQ" org.eventb.core.identifier="inspectionDisapproved"/>
+<org.eventb.core.variable name="_xwLO0GuUEeWvl-5rHAeKDQ" org.eventb.core.identifier="airplanesAtAirport"/>
+<org.eventb.core.invariant name="_3KBBUGuUEeWvl-5rHAeKDQ" org.eventb.core.label="defAirplane" org.eventb.core.predicate="airplanesAtAirport ⊆ Airplanes"/>
+<org.eventb.core.event name="_f05fkGuVEeWvl-5rHAeKDQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ENTER_BAGGAGE">
+<org.eventb.core.refinesEvent name="_Tudx4GuYEeWvl-5rHAeKDQ" org.eventb.core.target="ENTER_BAGGAGE"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="_sD1hoGuVEeWvl-5rHAeKDQ" org.eventb.core.label="finiteAirplanes" org.eventb.core.predicate="finite(airplanesAtAirport)"/>
+<org.eventb.core.invariant name="_wd-xsGuVEeWvl-5rHAeKDQ" org.eventb.core.label="cardAirplanes" org.eventb.core.predicate="card(airplanesAtAirport) ≤ 4"/>
+<org.eventb.core.event name="_0c3XMGuXEeWvl-5rHAeKDQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INSPECT_APPROVE">
+<org.eventb.core.refinesEvent name="_Ul_PwGuYEeWvl-5rHAeKDQ" org.eventb.core.target="INSPECT_APPROVE"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_Tudx4muYEeWvl-5rHAeKDQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INSPECT_DISAPPROVE">
+<org.eventb.core.refinesEvent name="_YHu4MGuYEeWvl-5rHAeKDQ" org.eventb.core.target="INSPECT_DISAPPROVE"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_TueY8GuYEeWvl-5rHAeKDQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="DELIVER">
+<org.eventb.core.refinesEvent name="_p_EtMGuYEeWvl-5rHAeKDQ" org.eventb.core.target="DELIVER"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_YHvfQGuYEeWvl-5rHAeKDQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="EXIT_DELIVERED_BAGGAGE">
+<org.eventb.core.refinesEvent name="_p_EtMWuYEeWvl-5rHAeKDQ" org.eventb.core.target="EXIT_DELIVERED_BAGGAGE"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_p_EtMmuYEeWvl-5rHAeKDQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="EXIT_NOT_DELIVERED_BAGGAGE">
+<org.eventb.core.refinesEvent name="_tKA_MGuYEeWvl-5rHAeKDQ" org.eventb.core.target="EXIT_NOT_DELIVERED_BAGGAGE"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_p_FUQGuYEeWvl-5rHAeKDQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ENTER_AIRPLANE">
+<org.eventb.core.parameter name="_f05fkWuVEeWvl-5rHAeKDQ" org.eventb.core.identifier="airplane"/>
+<org.eventb.core.guard name="_f05fkmuVEeWvl-5rHAeKDQ" org.eventb.core.label="grd5_01" org.eventb.core.predicate="airplane ∈ Airplanes"/>
+<org.eventb.core.guard name="_f06GoGuVEeWvl-5rHAeKDQ" org.eventb.core.label="grd5_02" org.eventb.core.predicate="airplane ∉ airplanesAtAirport"/>
+<org.eventb.core.guard name="_f06GoWuVEeWvl-5rHAeKDQ" org.eventb.core.label="grd5_03" org.eventb.core.predicate="card(airplanesAtAirport) &lt; 4"/>
+<org.eventb.core.action name="_f06GomuVEeWvl-5rHAeKDQ" org.eventb.core.assignment="airplanesAtAirport ≔ airplanesAtAirport ∪ {airplane}" org.eventb.core.label="act5_01"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_tKBmQGuYEeWvl-5rHAeKDQ" org.eventb.core.comment="refines EXIT_DELIVERED_BAGGAGE" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="EXIT_AIRPLANE"/>
 </org.eventb.core.machineFile>
