@@ -1,41 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1444072391686" org.eventb.texttools.text_representation="context context05 extends context01&#10;&#10;sets Locations Airplanes Counters Claim&#10;&#10;constants source destination&#10;&#9;&#9;  cl1 cl2 cl3 cl4&#10;&#9;&#9;  c1 c2 c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16&#10;&#10;&#10;axioms&#10;&#9;@infAirplanes ¬finite(Airplanes)&#10;&#10;&#9;@defineCounters Counters = {c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16}&#10;&#9;@finiteCounters finite(Counters)&#10;&#9;@cardCounters card(Counters) = 16&#10;&#10;&#9;@defineClaim Claim = {cl1, cl2, cl3, cl4}&#10;&#9;@finiteClaim finite(Claim)&#10;&#9;@cardClaim card(Claim) = 4&#10;&#10;&#9;@infiniteLocations ¬finite(Locations)&#10;&#9;@defLocations Locations = Counters ∪ Claim ∪ Airplanes&#10;&#10;&#10;&#9;@typeSource source ∈ Baggages → Locations&#10;&#9;@typeDestination destination ∈ Baggages → Locations&#10;&#10;end&#10;" version="3">
-<org.eventb.core.extendsContext name="_XczhIGtyEeWJd8bCiR6tag" org.eventb.core.target="context01"/>
-<org.eventb.core.carrierSet name="_gY2PEGtyEeWJd8bCiR6tag" org.eventb.core.identifier="Locations"/>
-<org.eventb.core.axiom name="_oai0oGtyEeWJd8bCiR6tag" org.eventb.core.label="infAirplanes" org.eventb.core.predicate="¬finite(Airplanes)"/>
-<org.eventb.core.carrierSet name="_KMWs0Gt0EeWJd8bCiR6tag" org.eventb.core.identifier="Airplanes"/>
-<org.eventb.core.carrierSet name="_KMWs0Wt0EeWJd8bCiR6tag" org.eventb.core.identifier="Counters"/>
-<org.eventb.core.axiom name="_Nyz2IGt0EeWJd8bCiR6tag" org.eventb.core.label="defineCounters" org.eventb.core.predicate="Counters = {c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16}"/>
-<org.eventb.core.axiom name="_RnSNUGt0EeWJd8bCiR6tag" org.eventb.core.label="finiteCounters" org.eventb.core.predicate="finite(Counters)"/>
-<org.eventb.core.carrierSet name="_XIOGUGt0EeWJd8bCiR6tag" org.eventb.core.identifier="Claim"/>
-<org.eventb.core.axiom name="_VpZF8Gt2EeWvl-5rHAeKDQ" org.eventb.core.label="cardCounters" org.eventb.core.predicate="card(Counters) = 16"/>
-<org.eventb.core.constant name="_E9S34Gt9EeWvl-5rHAeKDQ" org.eventb.core.identifier="source"/>
-<org.eventb.core.constant name="_E9S34Wt9EeWvl-5rHAeKDQ" org.eventb.core.identifier="destination"/>
-<org.eventb.core.axiom name="_PYx_UGt9EeWvl-5rHAeKDQ" org.eventb.core.label="defineClaim" org.eventb.core.predicate="Claim = {cl1, cl2, cl3, cl4}"/>
-<org.eventb.core.axiom name="_UKxusGt9EeWvl-5rHAeKDQ" org.eventb.core.label="finiteClaim" org.eventb.core.predicate="finite(Claim)"/>
-<org.eventb.core.constant name="_16urEGuREeWvl-5rHAeKDQ" org.eventb.core.identifier="cl1"/>
-<org.eventb.core.constant name="_16urEWuREeWvl-5rHAeKDQ" org.eventb.core.identifier="cl2"/>
-<org.eventb.core.constant name="_16urEmuREeWvl-5rHAeKDQ" org.eventb.core.identifier="cl3"/>
-<org.eventb.core.constant name="_16urE2uREeWvl-5rHAeKDQ" org.eventb.core.identifier="cl4"/>
-<org.eventb.core.constant name="_X5RNIGuSEeWvl-5rHAeKDQ" org.eventb.core.identifier="c1"/>
-<org.eventb.core.constant name="_X5R0MGuSEeWvl-5rHAeKDQ" org.eventb.core.identifier="c2"/>
-<org.eventb.core.constant name="_X5R0MWuSEeWvl-5rHAeKDQ" org.eventb.core.identifier="c3"/>
-<org.eventb.core.constant name="_X5R0MmuSEeWvl-5rHAeKDQ" org.eventb.core.identifier="c4"/>
-<org.eventb.core.constant name="_X5R0M2uSEeWvl-5rHAeKDQ" org.eventb.core.identifier="c5"/>
-<org.eventb.core.constant name="_X5R0NGuSEeWvl-5rHAeKDQ" org.eventb.core.identifier="c6"/>
-<org.eventb.core.constant name="_X5R0NWuSEeWvl-5rHAeKDQ" org.eventb.core.identifier="c7"/>
-<org.eventb.core.constant name="_X5R0NmuSEeWvl-5rHAeKDQ" org.eventb.core.identifier="c8"/>
-<org.eventb.core.constant name="_X5SbQGuSEeWvl-5rHAeKDQ" org.eventb.core.identifier="c9"/>
-<org.eventb.core.constant name="_X5SbQWuSEeWvl-5rHAeKDQ" org.eventb.core.identifier="c10"/>
-<org.eventb.core.constant name="_X5SbQmuSEeWvl-5rHAeKDQ" org.eventb.core.identifier="c11"/>
-<org.eventb.core.constant name="_X5SbQ2uSEeWvl-5rHAeKDQ" org.eventb.core.identifier="c12"/>
-<org.eventb.core.constant name="_X5SbRGuSEeWvl-5rHAeKDQ" org.eventb.core.identifier="c13"/>
-<org.eventb.core.constant name="_X5SbRWuSEeWvl-5rHAeKDQ" org.eventb.core.identifier="c14"/>
-<org.eventb.core.constant name="_X5SbRmuSEeWvl-5rHAeKDQ" org.eventb.core.identifier="c15"/>
-<org.eventb.core.constant name="_X5TCUGuSEeWvl-5rHAeKDQ" org.eventb.core.identifier="c16"/>
-<org.eventb.core.axiom name="_X5TCUWuSEeWvl-5rHAeKDQ" org.eventb.core.label="cardClaim" org.eventb.core.predicate="card(Claim) = 4"/>
-<org.eventb.core.axiom name="_sYiGoGuSEeWvl-5rHAeKDQ" org.eventb.core.label="infiniteLocations" org.eventb.core.predicate="¬finite(Locations)"/>
-<org.eventb.core.axiom name="_sYitsGuSEeWvl-5rHAeKDQ" org.eventb.core.label="defLocations" org.eventb.core.predicate="Locations = Counters ∪ Claim ∪ Airplanes"/>
-<org.eventb.core.axiom name="_GJDzgGuVEeWvl-5rHAeKDQ" org.eventb.core.label="typeSource" org.eventb.core.predicate="source ∈ Baggages → Locations"/>
-<org.eventb.core.axiom name="_GJDzgWuVEeWvl-5rHAeKDQ" org.eventb.core.label="typeDestination" org.eventb.core.predicate="destination ∈ Baggages → Locations"/>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1444148665847" org.eventb.texttools.text_representation="context context05 extends context01&#10;&#10;sets LocationTypes&#10;&#10;constants claim counter airplane&#10;&#10;axioms&#10;&#9;@Loc LocationTypes = {claim, counter, airplane}&#10;&#9;@diff claim ≠ counter ∧ claim ≠ airplane ∧ counter ≠ airplane&#10;&#10;&#9;theorem @loc1 finite(LocationTypes)&#10;&#10;end&#10;" version="3">
+<org.eventb.core.extendsContext name="_5pIpsGxFEeWOQ5bHJpn5_w" org.eventb.core.target="context01"/>
+<org.eventb.core.carrierSet name="_A3wzkGxGEeWOQ5bHJpn5_w" org.eventb.core.identifier="LocationTypes"/>
+<org.eventb.core.constant name="_EWY2kGxGEeWOQ5bHJpn5_w" org.eventb.core.identifier="claim"/>
+<org.eventb.core.constant name="_EWY2kWxGEeWOQ5bHJpn5_w" org.eventb.core.identifier="counter"/>
+<org.eventb.core.constant name="_EWY2kmxGEeWOQ5bHJpn5_w" org.eventb.core.identifier="airplane"/>
+<org.eventb.core.axiom name="_Pi9csGxGEeWOQ5bHJpn5_w" org.eventb.core.label="Loc" org.eventb.core.predicate="LocationTypes = {claim, counter, airplane}"/>
+<org.eventb.core.axiom name="_YdaPMGxGEeWOQ5bHJpn5_w" org.eventb.core.label="diff" org.eventb.core.predicate="claim ≠ counter ∧ claim ≠ airplane ∧ counter ≠ airplane"/>
+<org.eventb.core.axiom name="_daudwGxGEeWOQ5bHJpn5_w" org.eventb.core.label="loc1" org.eventb.core.predicate="finite(LocationTypes)" org.eventb.core.theorem="true"/>
 </org.eventb.core.contextFile>

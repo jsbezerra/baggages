@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1444073931416" org.eventb.texttools.text_representation="machine machine05 refines machine04 sees context05&#10;&#10;variables baggagesAtAirport deliveredBaggages notDeliveredBaggages inspectedBaggages notInspectedBaggages&#10;&#9;inspectionApproved inspectionDisapproved&#10;&#10;&#9;airplanesAtAirport&#10;&#10;invariants&#10;&#9;@defAirplane airplanesAtAirport ⊆ Airplanes&#10;&#9;@finiteAirplanes finite(airplanesAtAirport)&#10;&#9;@cardAirplanes card(airplanesAtAirport) ≤ 4&#10;&#10;events&#10;&#10;  event INITIALISATION&#10;  &#9;extends INITIALISATION&#10;&#9;then&#10;&#9;&#9;@initAirplanes airplanesAtAirport ≔ ∅&#10;  end&#10;&#10;  event ENTER_BAGGAGE extends ENTER_BAGGAGE&#10;  end&#10;&#10;  event INSPECT_APPROVE extends INSPECT_APPROVE&#10;  end&#10;&#10;  event INSPECT_DISAPPROVE extends INSPECT_DISAPPROVE&#10;  end&#10;&#10;  event DELIVER extends DELIVER&#10;  end&#10;&#10;  event EXIT_DELIVERED_BAGGAGE&#10;  &#9;extends EXIT_DELIVERED_BAGGAGE&#10;  end&#10;&#10;  event EXIT_NOT_DELIVERED_BAGGAGE&#10;  &#9;extends EXIT_NOT_DELIVERED_BAGGAGE&#10;  end&#10;&#10;  event ENTER_AIRPLANE&#10;  &#9;any airplane&#10;  &#9;where&#10;  &#9;&#9;@grd5_01 airplane ∈ Airplanes&#10;  &#9;&#9;@grd5_02 airplane ∉ airplanesAtAirport&#10;  &#9;&#9;@grd5_03 card(airplanesAtAirport) &lt; 4&#10;  &#9;then&#10;  &#9;&#9;@act5_01 airplanesAtAirport ≔ airplanesAtAirport ∪ {airplane}&#10;  end&#10;&#10;  event EXIT_AIRPLANE&#10;  &#9;//refines EXIT_DELIVERED_BAGGAGE&#10;  end&#10;&#10;end&#10;" version="5">
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1444154693782" org.eventb.texttools.text_representation="machine machine05 refines machine04 sees context05&#10;&#10;variables baggagesAtAirport deliveredBaggages notDeliveredBaggages inspectedBaggages notInspectedBaggages inspectionApproved&#10;&#9; inspectionDisapproved genericSource genericTarget deliveredToClaim deliveredToPlane&#10;&#10;invariants&#10;&#9;@genericSource genericSource ∈ baggagesAtAirport → LocationTypes ∖ {claim}&#10;&#9;@genericTarget genericTarget ∈ baggagesAtAirport → LocationTypes ∖ {counter}&#10;&#10;&#9;@delToClaim deliveredToClaim ⊆ deliveredBaggages&#10;&#9;@delToPlane deliveredToPlane ⊆ deliveredBaggages&#10;&#9;@allDeliveries deliveredToClaim ∪ deliveredToPlane = deliveredBaggages&#10;&#9;@allDeliverie2 deliveredToClaim ∩ deliveredToPlane = ∅&#10;&#10;&#9;@correctDeliverToClaim ∀ bag · bag ∈ deliveredToClaim ⇒ genericTarget(bag) = claim&#10;&#9;@correctDeliverToPlane ∀ bag · bag ∈ deliveredToPlane ⇒ genericTarget(bag) = airplane&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;  &#9;then&#10;  &#9;&#9;@init5_01 genericSource ≔ ∅&#10;  &#9;&#9;@init5_02 genericTarget ≔ ∅&#10;  &#9;&#9;@init5_03 deliveredToClaim ≔ ∅&#10;  &#9;&#9;@init5_04 deliveredToPlane ≔ ∅&#10;  end&#10;&#10;  event ENTER_BAGGAGE_COUNTER extends ENTER_BAGGAGE&#10;  &#9;then&#10;&#9;&#9;@act5_01 genericSource ≔ genericSource  {bag ↦ counter}&#10;&#9;&#9;@act5_02 genericTarget ≔ genericTarget  {bag ↦ airplane}&#10;  end&#10;&#10;  event ENTER_BAGGAGE_AIRPLANE_TO_AIRPLANE extends ENTER_BAGGAGE&#10;  &#9;then&#10;&#9;&#9;@act5_01 genericSource ≔ genericSource  {bag ↦ airplane}&#10;&#9;&#9;@act5_02 genericTarget ≔ genericTarget  {bag ↦ airplane}&#10;  end&#10;&#10;  event ENTER_BAGGAGE_AIRPLANE_TO_CLAIM extends ENTER_BAGGAGE&#10;  &#9;then&#10;&#9;&#9;@act5_01 genericSource ≔ genericSource  {bag ↦ airplane}&#10;&#9;&#9;@act5_02 genericTarget ≔ genericTarget  {bag ↦ claim}&#10;  end&#10;&#10;  event INSPECT_APPROVE extends INSPECT_APPROVE&#10;  end&#10;&#10;  event INSPECT_DISAPPROVE extends INSPECT_DISAPPROVE&#10;  end&#10;&#10;  event DELIVER_TO_CLAIM refines DELIVER&#10;  &#9;any bag&#10;  &#9;where&#10;  &#9;&#9;@grd5_01 bag ∈ notDeliveredBaggages&#10;  &#9;&#9;@grd5_02 bag ∈ inspectionApproved&#10;  &#9;&#9;//Novo&#10;  &#9;&#9;@grd5_03 genericTarget(bag) = claim&#10;  &#9;then&#10;  &#9;&#9;@act5_01 deliveredBaggages ≔  deliveredBaggages ∪ {bag}&#10;  &#9;&#9;@act5_02 notDeliveredBaggages ≔ notDeliveredBaggages ∖ {bag}&#10;  &#9;&#9;//Novo&#10;  &#9;&#9;@act5_03 deliveredToClaim ≔ deliveredToClaim ∪ {bag}&#10;  end&#10;&#10;  event DELIVER_TO_PLANE refines DELIVER&#10;  &#9;any bag&#10;  &#9;where&#10;  &#9;&#9;@grd5_01 bag ∈ notDeliveredBaggages&#10;  &#9;&#9;@grd5_02 bag ∈ inspectionApproved&#10;  &#9;&#9;//Novo&#10;  &#9;&#9;@grd5_03 genericTarget(bag) = airplane&#10;  &#9;then&#10;  &#9;&#9;@act5_01 deliveredBaggages ≔  deliveredBaggages ∪ {bag}&#10;  &#9;&#9;@act5_02 notDeliveredBaggages ≔ notDeliveredBaggages ∖ {bag}&#10;  &#9;&#9;//Novo&#10;  &#9;&#9;@act5_03 deliveredToPlane ≔ deliveredToPlane ∪ {bag}&#10;  end&#10;&#10;  event EXIT_DELIVERED_BAGGAGE_TO_PLANE refines EXIT_DELIVERED_BAGGAGE&#10;  &#9;any bag&#10;  &#9;where&#10;  &#9;&#9;@grd5_01 bag ∈ deliveredToPlane&#10;  &#9;then&#10;  &#9;&#9;@act4_01 baggagesAtAirport ≔ baggagesAtAirport ∖ {bag}&#10;  &#9;&#9;@act4_02 deliveredBaggages ≔ deliveredBaggages ∖ {bag}&#10;  &#9;&#9;@act4_03 inspectedBaggages ≔ inspectedBaggages ∖ {bag}&#10;  &#9;&#9;@act4_04 inspectionApproved ≔ inspectionApproved ∖ {bag}&#10;  &#9;&#9;@act5_01 genericSource ≔ {bag} ⩤ genericSource&#10;  &#9;&#9;@act5_02 genericTarget ≔ {bag} ⩤ genericTarget&#10;  &#9;&#9;@act5_03 deliveredToPlane ≔ deliveredToPlane ∖ {bag}&#10;  end&#10;&#10;  event EXIT_DELIVERED_BAGGAGE_TO_CLAIM refines EXIT_DELIVERED_BAGGAGE&#10;  &#9;any bag&#10;  &#9;where&#10;  &#9;&#9;@grd5_01 bag ∈ deliveredToClaim&#10;  &#9;then&#10;  &#9;&#9;@act5_04 baggagesAtAirport ≔ baggagesAtAirport ∖ {bag}&#10;  &#9;&#9;@act5_05 deliveredBaggages ≔ deliveredBaggages ∖ {bag}&#10;  &#9;&#9;@act5_06 inspectedBaggages ≔ inspectedBaggages ∖ {bag}&#10;  &#9;&#9;@act5_07 inspectionApproved ≔ inspectionApproved ∖ {bag}&#10;  &#9;&#9;@act5_01 genericSource ≔ {bag} ⩤ genericSource&#10;  &#9;&#9;@act5_02 genericTarget ≔ {bag} ⩤ genericTarget&#10;&#9;&#9;@act5_03 deliveredToClaim ≔ deliveredToClaim ∖ {bag}&#10;  end&#10;&#10;  event EXIT_NOT_DELIVERED_BAGGAGE extends EXIT_NOT_DELIVERED_BAGGAGE&#10;  &#9;then&#10;  &#9;&#9;@act5_01 genericSource ≔ {bag} ⩤ genericSource&#10;  &#9;&#9;@act5_02 genericTarget ≔ {bag} ⩤ genericTarget&#10;  end&#10;&#10;end&#10;" version="5">
 <org.eventb.core.refinesMachine name="_7tti4Gt8EeWvl-5rHAeKDQ" org.eventb.core.target="machine04"/>
 <org.eventb.core.seesContext name="_7tti4Wt8EeWvl-5rHAeKDQ" org.eventb.core.target="context05"/>
 <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
-<org.eventb.core.action name="_AHmAUGuVEeWvl-5rHAeKDQ" org.eventb.core.assignment="airplanesAtAirport ≔ ∅" org.eventb.core.label="initAirplanes"/>
+<org.eventb.core.action name="_X8FOUGxHEeWOQ5bHJpn5_w" org.eventb.core.assignment="genericSource ≔ ∅" org.eventb.core.label="init5_01"/>
+<org.eventb.core.action name="_qKjw8GxHEeWOQ5bHJpn5_w" org.eventb.core.assignment="genericTarget ≔ ∅" org.eventb.core.label="init5_02"/>
+<org.eventb.core.action name="_3KjcgGxHEeWOQ5bHJpn5_w" org.eventb.core.assignment="deliveredToClaim ≔ ∅" org.eventb.core.label="init5_03"/>
+<org.eventb.core.action name="_-qsNIGxHEeWOQ5bHJpn5_w" org.eventb.core.assignment="deliveredToPlane ≔ ∅" org.eventb.core.label="init5_04"/>
 </org.eventb.core.event>
 <org.eventb.core.variable name="_Ac8SIGt9EeWvl-5rHAeKDQ" org.eventb.core.identifier="baggagesAtAirport"/>
 <org.eventb.core.variable name="_Ac8SIWt9EeWvl-5rHAeKDQ" org.eventb.core.identifier="deliveredBaggages"/>
@@ -12,34 +15,86 @@
 <org.eventb.core.variable name="_Ac85Mmt9EeWvl-5rHAeKDQ" org.eventb.core.identifier="notInspectedBaggages"/>
 <org.eventb.core.variable name="_Ac85M2t9EeWvl-5rHAeKDQ" org.eventb.core.identifier="inspectionApproved"/>
 <org.eventb.core.variable name="_Ac85NGt9EeWvl-5rHAeKDQ" org.eventb.core.identifier="inspectionDisapproved"/>
-<org.eventb.core.variable name="_xwLO0GuUEeWvl-5rHAeKDQ" org.eventb.core.identifier="airplanesAtAirport"/>
-<org.eventb.core.invariant name="_3KBBUGuUEeWvl-5rHAeKDQ" org.eventb.core.label="defAirplane" org.eventb.core.predicate="airplanesAtAirport ⊆ Airplanes"/>
-<org.eventb.core.event name="_f05fkGuVEeWvl-5rHAeKDQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ENTER_BAGGAGE">
+<org.eventb.core.event name="_f05fkGuVEeWvl-5rHAeKDQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ENTER_BAGGAGE_COUNTER">
 <org.eventb.core.refinesEvent name="_Tudx4GuYEeWvl-5rHAeKDQ" org.eventb.core.target="ENTER_BAGGAGE"/>
+<org.eventb.core.action name="_SjMBkGxIEeWOQ5bHJpn5_w" org.eventb.core.assignment="genericSource ≔ genericSource  {bag ↦ counter}" org.eventb.core.label="act5_01"/>
+<org.eventb.core.action name="_ipO4EGxIEeWOQ5bHJpn5_w" org.eventb.core.assignment="genericTarget ≔ genericTarget  {bag ↦ airplane}" org.eventb.core.label="act5_02"/>
 </org.eventb.core.event>
-<org.eventb.core.invariant name="_sD1hoGuVEeWvl-5rHAeKDQ" org.eventb.core.label="finiteAirplanes" org.eventb.core.predicate="finite(airplanesAtAirport)"/>
-<org.eventb.core.invariant name="_wd-xsGuVEeWvl-5rHAeKDQ" org.eventb.core.label="cardAirplanes" org.eventb.core.predicate="card(airplanesAtAirport) ≤ 4"/>
-<org.eventb.core.event name="_0c3XMGuXEeWvl-5rHAeKDQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INSPECT_APPROVE">
-<org.eventb.core.refinesEvent name="_Ul_PwGuYEeWvl-5rHAeKDQ" org.eventb.core.target="INSPECT_APPROVE"/>
+<org.eventb.core.event name="_0c3XMGuXEeWvl-5rHAeKDQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ENTER_BAGGAGE_AIRPLANE_TO_AIRPLANE">
+<org.eventb.core.refinesEvent name="_pPiWUGxLEeWOQ5bHJpn5_w" org.eventb.core.target="ENTER_BAGGAGE"/>
+<org.eventb.core.action name="__wLuMGxKEeWOQ5bHJpn5_w" org.eventb.core.assignment="genericSource ≔ genericSource  {bag ↦ airplane}" org.eventb.core.label="act5_01"/>
+<org.eventb.core.action name="__wLuMWxKEeWOQ5bHJpn5_w" org.eventb.core.assignment="genericTarget ≔ genericTarget  {bag ↦ airplane}" org.eventb.core.label="act5_02"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_Tudx4muYEeWvl-5rHAeKDQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INSPECT_DISAPPROVE">
-<org.eventb.core.refinesEvent name="_YHu4MGuYEeWvl-5rHAeKDQ" org.eventb.core.target="INSPECT_DISAPPROVE"/>
+<org.eventb.core.event name="_Tudx4muYEeWvl-5rHAeKDQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ENTER_BAGGAGE_AIRPLANE_TO_CLAIM">
+<org.eventb.core.refinesEvent name="_xXNBAGxLEeWOQ5bHJpn5_w" org.eventb.core.target="ENTER_BAGGAGE"/>
+<org.eventb.core.action name="_pPjkcmxLEeWOQ5bHJpn5_w" org.eventb.core.assignment="genericSource ≔ genericSource  {bag ↦ airplane}" org.eventb.core.label="act5_01"/>
+<org.eventb.core.action name="_pPjkc2xLEeWOQ5bHJpn5_w" org.eventb.core.assignment="genericTarget ≔ genericTarget  {bag ↦ claim}" org.eventb.core.label="act5_02"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_TueY8GuYEeWvl-5rHAeKDQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="DELIVER">
-<org.eventb.core.refinesEvent name="_p_EtMGuYEeWvl-5rHAeKDQ" org.eventb.core.target="DELIVER"/>
+<org.eventb.core.event name="_TueY8GuYEeWvl-5rHAeKDQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INSPECT_APPROVE">
+<org.eventb.core.refinesEvent name="_xXNBAWxLEeWOQ5bHJpn5_w" org.eventb.core.target="INSPECT_APPROVE"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_YHvfQGuYEeWvl-5rHAeKDQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="EXIT_DELIVERED_BAGGAGE">
-<org.eventb.core.refinesEvent name="_p_EtMWuYEeWvl-5rHAeKDQ" org.eventb.core.target="EXIT_DELIVERED_BAGGAGE"/>
+<org.eventb.core.event name="_YHvfQGuYEeWvl-5rHAeKDQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INSPECT_DISAPPROVE">
+<org.eventb.core.refinesEvent name="_xXNoEGxLEeWOQ5bHJpn5_w" org.eventb.core.target="INSPECT_DISAPPROVE"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_p_EtMmuYEeWvl-5rHAeKDQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="EXIT_NOT_DELIVERED_BAGGAGE">
-<org.eventb.core.refinesEvent name="_tKA_MGuYEeWvl-5rHAeKDQ" org.eventb.core.target="EXIT_NOT_DELIVERED_BAGGAGE"/>
+<org.eventb.core.event name="_p_EtMmuYEeWvl-5rHAeKDQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="DELIVER_TO_CLAIM">
+<org.eventb.core.refinesEvent name="_xXNoEWxLEeWOQ5bHJpn5_w" org.eventb.core.target="DELIVER"/>
+<org.eventb.core.parameter name="_xSbccGxQEeWOQ5bHJpn5_w" org.eventb.core.identifier="bag"/>
+<org.eventb.core.guard name="_xSbccWxQEeWOQ5bHJpn5_w" org.eventb.core.label="grd5_01" org.eventb.core.predicate="bag ∈ notDeliveredBaggages"/>
+<org.eventb.core.guard name="_xSbccmxQEeWOQ5bHJpn5_w" org.eventb.core.comment="Novo" org.eventb.core.label="grd5_02" org.eventb.core.predicate="bag ∈ inspectionApproved"/>
+<org.eventb.core.action name="_xXOPIWxLEeWOQ5bHJpn5_w" org.eventb.core.assignment="deliveredBaggages ≔  deliveredBaggages ∪ {bag}" org.eventb.core.label="act5_01"/>
+<org.eventb.core.action name="_xXOPImxLEeWOQ5bHJpn5_w" org.eventb.core.assignment="notDeliveredBaggages ≔ notDeliveredBaggages ∖ {bag}" org.eventb.core.comment="Novo" org.eventb.core.label="act5_02"/>
+<org.eventb.core.action name="_54HKwGxOEeWOQ5bHJpn5_w" org.eventb.core.assignment="deliveredToClaim ≔ deliveredToClaim ∪ {bag}" org.eventb.core.label="act5_03"/>
+<org.eventb.core.guard name="_Qyyr4GxREeWOQ5bHJpn5_w" org.eventb.core.label="grd5_03" org.eventb.core.predicate="genericTarget(bag) = claim"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_p_FUQGuYEeWvl-5rHAeKDQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ENTER_AIRPLANE">
-<org.eventb.core.parameter name="_f05fkWuVEeWvl-5rHAeKDQ" org.eventb.core.identifier="airplane"/>
-<org.eventb.core.guard name="_f05fkmuVEeWvl-5rHAeKDQ" org.eventb.core.label="grd5_01" org.eventb.core.predicate="airplane ∈ Airplanes"/>
-<org.eventb.core.guard name="_f06GoGuVEeWvl-5rHAeKDQ" org.eventb.core.label="grd5_02" org.eventb.core.predicate="airplane ∉ airplanesAtAirport"/>
-<org.eventb.core.guard name="_f06GoWuVEeWvl-5rHAeKDQ" org.eventb.core.label="grd5_03" org.eventb.core.predicate="card(airplanesAtAirport) &lt; 4"/>
-<org.eventb.core.action name="_f06GomuVEeWvl-5rHAeKDQ" org.eventb.core.assignment="airplanesAtAirport ≔ airplanesAtAirport ∪ {airplane}" org.eventb.core.label="act5_01"/>
+<org.eventb.core.variable name="_KPF54GxHEeWOQ5bHJpn5_w" org.eventb.core.identifier="genericSource"/>
+<org.eventb.core.invariant name="_QAreAGxHEeWOQ5bHJpn5_w" org.eventb.core.label="genericSource" org.eventb.core.predicate="genericSource ∈ baggagesAtAirport → LocationTypes ∖ {claim}"/>
+<org.eventb.core.variable name="_LTncgGxIEeWOQ5bHJpn5_w" org.eventb.core.identifier="genericTarget"/>
+<org.eventb.core.invariant name="_QIxNkGxIEeWOQ5bHJpn5_w" org.eventb.core.label="genericTarget" org.eventb.core.predicate="genericTarget ∈ baggagesAtAirport → LocationTypes ∖ {counter}"/>
+<org.eventb.core.event name="_pPjkcGxLEeWOQ5bHJpn5_w" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="DELIVER_TO_PLANE">
+<org.eventb.core.refinesEvent name="_Tas7kGxMEeWOQ5bHJpn5_w" org.eventb.core.target="DELIVER"/>
+<org.eventb.core.parameter name="_ag2FkGxREeWOQ5bHJpn5_w" org.eventb.core.identifier="bag"/>
+<org.eventb.core.guard name="_ag2FkWxREeWOQ5bHJpn5_w" org.eventb.core.label="grd5_01" org.eventb.core.predicate="bag ∈ notDeliveredBaggages"/>
+<org.eventb.core.guard name="_ag2FkmxREeWOQ5bHJpn5_w" org.eventb.core.comment="Novo" org.eventb.core.label="grd5_02" org.eventb.core.predicate="bag ∈ inspectionApproved"/>
+<org.eventb.core.guard name="_jdAIQGxREeWOQ5bHJpn5_w" org.eventb.core.label="grd5_03" org.eventb.core.predicate="genericTarget(bag) = airplane"/>
+<org.eventb.core.action name="_54HKwWxOEeWOQ5bHJpn5_w" org.eventb.core.assignment="deliveredBaggages ≔  deliveredBaggages ∪ {bag}" org.eventb.core.label="act5_01"/>
+<org.eventb.core.action name="_xScDgGxQEeWOQ5bHJpn5_w" org.eventb.core.assignment="notDeliveredBaggages ≔ notDeliveredBaggages ∖ {bag}" org.eventb.core.comment="Novo" org.eventb.core.label="act5_02"/>
+<org.eventb.core.action name="_xScDgWxQEeWOQ5bHJpn5_w" org.eventb.core.assignment="deliveredToPlane ≔ deliveredToPlane ∪ {bag}" org.eventb.core.label="act5_03"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_tKBmQGuYEeWvl-5rHAeKDQ" org.eventb.core.comment="refines EXIT_DELIVERED_BAGGAGE" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="EXIT_AIRPLANE"/>
+<org.eventb.core.event name="_xXNoE2xLEeWOQ5bHJpn5_w" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="EXIT_DELIVERED_BAGGAGE_TO_PLANE">
+<org.eventb.core.refinesEvent name="_TatioGxMEeWOQ5bHJpn5_w" org.eventb.core.target="EXIT_DELIVERED_BAGGAGE"/>
+<org.eventb.core.parameter name="_gmLaMGxTEeWOQ5bHJpn5_w" org.eventb.core.identifier="bag"/>
+<org.eventb.core.guard name="_x8VqMGxSEeWOQ5bHJpn5_w" org.eventb.core.label="grd5_01" org.eventb.core.predicate="bag ∈ deliveredToPlane"/>
+<org.eventb.core.action name="_MQ7qQGxREeWOQ5bHJpn5_w" org.eventb.core.assignment="baggagesAtAirport ≔ baggagesAtAirport ∖ {bag}" org.eventb.core.label="act4_01"/>
+<org.eventb.core.action name="_ag2soGxREeWOQ5bHJpn5_w" org.eventb.core.assignment="deliveredBaggages ≔ deliveredBaggages ∖ {bag}" org.eventb.core.label="act4_02"/>
+<org.eventb.core.action name="_ag2soWxREeWOQ5bHJpn5_w" org.eventb.core.assignment="inspectedBaggages ≔ inspectedBaggages ∖ {bag}" org.eventb.core.label="act4_03"/>
+<org.eventb.core.action name="_fn9JUGxREeWOQ5bHJpn5_w" org.eventb.core.assignment="inspectionApproved ≔ inspectionApproved ∖ {bag}" org.eventb.core.label="act4_04"/>
+<org.eventb.core.action name="_d7kDgGxSEeWOQ5bHJpn5_w" org.eventb.core.assignment="genericSource ≔ {bag} ⩤ genericSource" org.eventb.core.label="act5_01"/>
+<org.eventb.core.action name="_d7kDgWxSEeWOQ5bHJpn5_w" org.eventb.core.assignment="genericTarget ≔ {bag} ⩤ genericTarget" org.eventb.core.label="act5_02"/>
+<org.eventb.core.action name="_V3s6wmxSEeWOQ5bHJpn5_w" org.eventb.core.assignment="deliveredToPlane ≔ deliveredToPlane ∖ {bag}" org.eventb.core.label="act5_03"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_TatioWxMEeWOQ5bHJpn5_w" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="EXIT_DELIVERED_BAGGAGE_TO_CLAIM">
+<org.eventb.core.refinesEvent name="_V3sTsGxSEeWOQ5bHJpn5_w" org.eventb.core.target="EXIT_DELIVERED_BAGGAGE"/>
+<org.eventb.core.parameter name="__Q73UGxTEeWOQ5bHJpn5_w" org.eventb.core.identifier="bag"/>
+<org.eventb.core.guard name="_gmLaMWxTEeWOQ5bHJpn5_w" org.eventb.core.label="grd5_01" org.eventb.core.predicate="bag ∈ deliveredToClaim"/>
+<org.eventb.core.action name="_V3s6w2xSEeWOQ5bHJpn5_w" org.eventb.core.assignment="baggagesAtAirport ≔ baggagesAtAirport ∖ {bag}" org.eventb.core.label="act5_04"/>
+<org.eventb.core.action name="_d7kqkWxSEeWOQ5bHJpn5_w" org.eventb.core.assignment="deliveredBaggages ≔ deliveredBaggages ∖ {bag}" org.eventb.core.label="act5_05"/>
+<org.eventb.core.action name="_gmMBQGxTEeWOQ5bHJpn5_w" org.eventb.core.assignment="inspectedBaggages ≔ inspectedBaggages ∖ {bag}" org.eventb.core.label="act5_06"/>
+<org.eventb.core.action name="_gmMBQWxTEeWOQ5bHJpn5_w" org.eventb.core.assignment="inspectionApproved ≔ inspectionApproved ∖ {bag}" org.eventb.core.label="act5_07"/>
+<org.eventb.core.action name="_d7kqkGxSEeWOQ5bHJpn5_w" org.eventb.core.assignment="genericSource ≔ {bag} ⩤ genericSource" org.eventb.core.label="act5_01"/>
+<org.eventb.core.action name="_V6U7gGxTEeWOQ5bHJpn5_w" org.eventb.core.assignment="genericTarget ≔ {bag} ⩤ genericTarget" org.eventb.core.label="act5_02"/>
+<org.eventb.core.action name="_gmMoUGxTEeWOQ5bHJpn5_w" org.eventb.core.assignment="deliveredToClaim ≔ deliveredToClaim ∖ {bag}" org.eventb.core.label="act5_03"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_s5EhcGxOEeWOQ5bHJpn5_w" org.eventb.core.identifier="deliveredToClaim"/>
+<org.eventb.core.variable name="_s5EhcWxOEeWOQ5bHJpn5_w" org.eventb.core.identifier="deliveredToPlane"/>
+<org.eventb.core.invariant name="_xrJwYGxOEeWOQ5bHJpn5_w" org.eventb.core.label="delToClaim" org.eventb.core.predicate="deliveredToClaim ⊆ deliveredBaggages"/>
+<org.eventb.core.invariant name="_zvY5AGxOEeWOQ5bHJpn5_w" org.eventb.core.label="delToPlane" org.eventb.core.predicate="deliveredToPlane ⊆ deliveredBaggages"/>
+<org.eventb.core.invariant name="_FdtU4GxPEeWOQ5bHJpn5_w" org.eventb.core.label="allDeliveries" org.eventb.core.predicate="deliveredToClaim ∪ deliveredToPlane = deliveredBaggages"/>
+<org.eventb.core.invariant name="_KIwuwGxPEeWOQ5bHJpn5_w" org.eventb.core.label="allDeliverie2" org.eventb.core.predicate="deliveredToClaim ∩ deliveredToPlane = ∅"/>
+<org.eventb.core.invariant name="_VxlzEGxPEeWOQ5bHJpn5_w" org.eventb.core.label="correctDeliverToClaim" org.eventb.core.predicate="∀ bag · bag ∈ deliveredToClaim ⇒ genericTarget(bag) = claim"/>
+<org.eventb.core.invariant name="_bqk_sGxPEeWOQ5bHJpn5_w" org.eventb.core.label="correctDeliverToPlane" org.eventb.core.predicate="∀ bag · bag ∈ deliveredToPlane ⇒ genericTarget(bag) = airplane"/>
+<org.eventb.core.event name="_V3s6wGxSEeWOQ5bHJpn5_w" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="EXIT_NOT_DELIVERED_BAGGAGE">
+<org.eventb.core.refinesEvent name="_V3s6wWxSEeWOQ5bHJpn5_w" org.eventb.core.target="EXIT_NOT_DELIVERED_BAGGAGE"/>
+<org.eventb.core.action name="_gmMoUWxTEeWOQ5bHJpn5_w" org.eventb.core.assignment="genericSource ≔ {bag} ⩤ genericSource" org.eventb.core.label="act5_01"/>
+<org.eventb.core.action name="_1LfRUGxTEeWOQ5bHJpn5_w" org.eventb.core.assignment="genericTarget ≔ {bag} ⩤ genericTarget" org.eventb.core.label="act5_02"/>
+</org.eventb.core.event>
 </org.eventb.core.machineFile>
