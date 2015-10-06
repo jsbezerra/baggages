@@ -12547,4 +12547,846 @@
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
 </org.eventb.core.prProof>
+<org.eventb.core.prProof name="dlf2/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="bag" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6" org.eventb.core.prSets="Baggages,LocationTypes">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p26">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p7" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8,p9,p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13"/>
+<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p14" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p15"/>
+<org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p17"/>
+<org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p18" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p19"/>
+<org.eventb.core.prHypAction name="REWRITE6" org.eventb.core.prHidden="p20" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21"/>
+<org.eventb.core.prHypAction name="REWRITE7" org.eventb.core.prHidden="p22" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23"/>
+<org.eventb.core.prHypAction name="REWRITE8" org.eventb.core.prHidden="p24" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p25"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p26" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p33">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p27"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p28"/>
+<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p15" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p29"/>
+<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p17" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p30"/>
+<org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p31"/>
+<org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p25" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p32"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p33" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p39">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p28" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p34"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p29" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p35"/>
+<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p30" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p36"/>
+<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p31" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p37"/>
+<org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p32" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p38"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees bag)" org.eventb.core.prGoal="p39" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p40">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with deliveredToClaim∪deliveredToPlane=deliveredBaggages" org.eventb.core.prHyps="p2">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p41" org.eventb.core.prInfHyps="p42"/>
+<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p43" org.eventb.core.prInfHyps="p44"/>
+<org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p41,p43"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p42"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p44"/>
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p40" org.eventb.core.prHyps="p6,p1,p2,p3,p5,p4">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="airplane" org.eventb.core.type="LocationTypes"/>
+<org.eventb.core.prIdent name="baggagesAtAirport" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="claim" org.eventb.core.type="LocationTypes"/>
+<org.eventb.core.prIdent name="counter" org.eventb.core.type="LocationTypes"/>
+<org.eventb.core.prIdent name="deliveredBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="deliveredToClaim" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="deliveredToPlane" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="genericSource" org.eventb.core.type="ℙ(Baggages×LocationTypes)"/>
+<org.eventb.core.prIdent name="genericTarget" org.eventb.core.type="ℙ(Baggages×LocationTypes)"/>
+<org.eventb.core.prIdent name="inspectionApproved" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="notDeliveredBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="notInspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬counter=airplane"/>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="∀bag⦂Baggages·¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨((bag∈notDeliveredBaggages∧bag∈inspectionApproved⇒bag∈dom(genericTarget)∧genericTarget∈Baggages ⇸ LocationTypes)∧((bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved⇒bag∈dom(genericTarget)∧genericTarget∈Baggages ⇸ LocationTypes)))"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="∀bag⦂Baggages·⊤⇒¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages)∨bag∈deliveredBaggages">
+<org.eventb.core.prIdent name="inspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p44" org.eventb.core.predicate="deliveredToPlane⊆deliveredToClaim∪deliveredToPlane"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒bag∉baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages)∨bag∈deliveredBaggages∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages)">
+<org.eventb.core.prIdent name="inspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="∀bag⦂Baggages·⊤⇒¬bag∈baggagesAtAirport∨bag∈notDeliveredBaggages∨bag∈deliveredBaggages"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒bag∉baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨((bag∈notDeliveredBaggages∧bag∈inspectionApproved⇒bag∈dom(genericTarget)∧genericTarget∈Baggages ⇸ LocationTypes)∧((bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved⇒bag∈dom(genericTarget)∧genericTarget∈Baggages ⇸ LocationTypes)))"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="genericTarget∈baggagesAtAirport → LocationTypes ∖ {counter}"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="∀bag⦂Baggages·¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages)∨bag∈deliveredBaggages">
+<org.eventb.core.prIdent name="inspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="deliveredToPlane⊆deliveredBaggages"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages)∨bag∈deliveredBaggages">
+<org.eventb.core.prIdent name="inspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒bag∉baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved)∨bag∈deliveredBaggages∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages∧bag∈inspectionDisapproved)">
+<org.eventb.core.prIdent name="inspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="inspectionDisapproved" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒bag∉baggagesAtAirport∨bag∈notDeliveredBaggages∨bag∈deliveredBaggages"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="∀b⦂Baggages·b∈inspectionDisapproved⇒¬b∈deliveredBaggages">
+<org.eventb.core.prIdent name="inspectionDisapproved" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved)∨bag∈deliveredBaggages∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages∧bag∈inspectionDisapproved)">
+<org.eventb.core.prIdent name="inspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="inspectionDisapproved" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="∀b⦂Baggages·b∈Baggages∧¬b∈baggagesAtAirport⇒¬b∈deliveredBaggages∧¬b∈notDeliveredBaggages"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬claim=counter"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="deliveredToClaim∪deliveredToPlane=deliveredBaggages"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="∀b⦂Baggages·b∈Baggages⇒b∈baggagesAtAirport∨b∉baggagesAtAirport"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="∀bag⦂Baggages·¬bag∈baggagesAtAirport∨bag∈notDeliveredBaggages∨bag∈deliveredBaggages"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬claim=airplane"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="∀b⦂Baggages·¬b∈baggagesAtAirport⇒¬b∈inspectedBaggages∧¬b∈notInspectedBaggages">
+<org.eventb.core.prIdent name="inspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨((bag∈notDeliveredBaggages∧bag∈inspectionApproved⇒bag∈dom(genericTarget)∧genericTarget∈Baggages ⇸ LocationTypes)∧((bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved⇒bag∈dom(genericTarget)∧genericTarget∈Baggages ⇸ LocationTypes)))">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="deliveredToClaim⊆deliveredBaggages"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="∀b⦂Baggages·b∈Baggages∧b∉baggagesAtAirport⇒b∉inspectedBaggages∧b∉notInspectedBaggages">
+<org.eventb.core.prIdent name="inspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨((bag∈notDeliveredBaggages∧bag∈inspectionApproved⇒bag∈dom(genericTarget)∧genericTarget∈Baggages ⇸ LocationTypes)∧((bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved⇒bag∈dom(genericTarget)∧genericTarget∈Baggages ⇸ LocationTypes)))"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="∀bag⦂Baggages·⊤⇒¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved)∨bag∈deliveredBaggages∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages∧bag∈inspectionDisapproved)">
+<org.eventb.core.prIdent name="inspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="inspectionDisapproved" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="∀bag⦂Baggages·¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved)∨bag∈deliveredBaggages∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages∧bag∈inspectionDisapproved)">
+<org.eventb.core.prIdent name="inspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="inspectionDisapproved" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="∀b⦂Baggages·⊤∧¬b∈baggagesAtAirport⇒¬b∈deliveredBaggages∧¬b∈notDeliveredBaggages"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="∀b⦂Baggages·¬b∈inspectedBaggages⇒¬b∈deliveredBaggages">
+<org.eventb.core.prIdent name="inspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒¬bag∈baggagesAtAirport∨bag∈notDeliveredBaggages∨bag∈deliveredBaggages"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="∀b⦂Baggages·b∈inspectionDisapproved⇒b∉deliveredBaggages">
+<org.eventb.core.prIdent name="inspectionDisapproved" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="∀b⦂Baggages·⊤∧¬b∈baggagesAtAirport⇒¬b∈inspectedBaggages∧¬b∈notInspectedBaggages">
+<org.eventb.core.prIdent name="inspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="∀b⦂Baggages·¬b∈baggagesAtAirport⇒¬b∈deliveredBaggages∧¬b∈notDeliveredBaggages"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="∀b⦂Baggages·b∉inspectedBaggages⇒b∉deliveredBaggages">
+<org.eventb.core.prIdent name="inspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="deliveredToClaim∩deliveredToPlane=(∅ ⦂ ℙ(Baggages))"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀bag⦂Baggages·bag∈deliveredToPlane⇒genericTarget(bag)=airplane"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="baggagesAtAirport⊆Baggages"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀bag⦂Baggages·bag∈deliveredToClaim⇒genericTarget(bag)=claim"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="claim≠counter∧claim≠airplane∧counter≠airplane"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="∀bag⦂Baggages·⊤⇒¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨((bag∈notDeliveredBaggages∧bag∈inspectionApproved⇒bag∈dom(genericTarget)∧genericTarget∈Baggages ⇸ LocationTypes)∧((bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved⇒bag∈dom(genericTarget)∧genericTarget∈Baggages ⇸ LocationTypes)))"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="∀b⦂Baggages·b∈Baggages∧¬b∈baggagesAtAirport⇒¬b∈inspectedBaggages∧¬b∈notInspectedBaggages">
+<org.eventb.core.prIdent name="inspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="deliveredToClaim⊆deliveredToClaim∪deliveredToPlane"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="genericSource∈baggagesAtAirport → LocationTypes ∖ {claim}"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="∀b⦂Baggages·b∈Baggages∧b∉baggagesAtAirport⇒b∉deliveredBaggages∧b∉notDeliveredBaggages"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="dlf2/THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7" org.eventb.core.prSets="Baggages,LocationTypes">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p30">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p8" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9,p10,p11"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p14"/>
+<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p15" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p16"/>
+<org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p17" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p18"/>
+<org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p19" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p20"/>
+<org.eventb.core.prHypAction name="REWRITE6" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p22"/>
+<org.eventb.core.prHypAction name="REWRITE7" org.eventb.core.prHidden="p23" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p24"/>
+<org.eventb.core.prHypAction name="REWRITE8" org.eventb.core.prHidden="p25" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p26"/>
+<org.eventb.core.prHypAction name="REWRITE9" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p27"/>
+<org.eventb.core.prHypAction name="REWRITE10" org.eventb.core.prHidden="p28" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p29"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p30" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p39">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p31"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p14" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p32"/>
+<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p33"/>
+<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p18" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p34"/>
+<org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p22" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p35"/>
+<org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p26" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p36"/>
+<org.eventb.core.prHypAction name="REWRITE6" org.eventb.core.prHidden="p27" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p37"/>
+<org.eventb.core.prHypAction name="REWRITE7" org.eventb.core.prHidden="p29" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p38"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p39" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p47">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p32" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p40"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p33" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p41"/>
+<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p34" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p42"/>
+<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p35" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p43"/>
+<org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p36" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p44"/>
+<org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p37" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p45"/>
+<org.eventb.core.prHypAction name="REWRITE6" org.eventb.core.prHidden="p38" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p46"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with deliveredToClaim∪deliveredToPlane=deliveredBaggages" org.eventb.core.prHyps="p3">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p48" org.eventb.core.prInfHyps="p49"/>
+<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p50" org.eventb.core.prInfHyps="p51"/>
+<org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p48,p50"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p49"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p51"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p47" org.eventb.core.prHyps="p7,p2,p3,p4,p6,p5,p45">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="airplane" org.eventb.core.type="LocationTypes"/>
+<org.eventb.core.prIdent name="baggagesAtAirport" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="claim" org.eventb.core.type="LocationTypes"/>
+<org.eventb.core.prIdent name="counter" org.eventb.core.type="LocationTypes"/>
+<org.eventb.core.prIdent name="deliveredBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="deliveredToClaim" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="deliveredToPlane" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="genericSource" org.eventb.core.type="ℙ(Baggages×LocationTypes)"/>
+<org.eventb.core.prIdent name="genericTarget" org.eventb.core.type="ℙ(Baggages×LocationTypes)"/>
+<org.eventb.core.prIdent name="inspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="inspectionApproved" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="inspectionDisapproved" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="notDeliveredBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="notInspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬counter=airplane"/>
+<org.eventb.core.prPred name="p46" org.eventb.core.predicate="∀bag⦂Baggages·¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨((bag∈notDeliveredBaggages∧bag∈inspectionApproved⇒bag∈dom(genericTarget)∧genericTarget∈Baggages ⇸ LocationTypes)∧((bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved⇒bag∈dom(genericTarget)∧genericTarget∈Baggages ⇸ LocationTypes)))"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="∀bag⦂Baggages·⊤⇒¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages)∨bag∈deliveredBaggages"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="∀bag⦂Baggages·⊤⇒¬bag∈baggagesAtAirport∨bag∈notDeliveredBaggages∨bag∈deliveredBaggages"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="genericTarget∈baggagesAtAirport → LocationTypes ∖ {counter}"/>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="∀bag⦂Baggages·¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages)∨bag∈deliveredBaggages"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒bag∉baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved)∨bag∈deliveredBaggages∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages∧bag∈inspectionDisapproved)"/>
+<org.eventb.core.prPred name="p47" org.eventb.core.predicate="(∃bag⦂Baggages·¬bag∈baggagesAtAirport)∨(∃bag⦂Baggages·bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(∃bag⦂Baggages·bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(∃bag⦂Baggages·bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=airplane)∨(∃bag⦂Baggages·bag∈deliveredToPlane)∨(∃bag⦂Baggages·bag∈deliveredToClaim)∨(∃bag⦂Baggages·bag∈notDeliveredBaggages∧bag∈inspectedBaggages∧bag∈inspectionDisapproved)"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved)∨bag∈deliveredBaggages∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages∧bag∈inspectionDisapproved)"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="∀bag⦂Baggages·⊤⇒¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=airplane)∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages∧bag∈inspectionDisapproved)"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬claim=counter"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="deliveredToClaim∪deliveredToPlane=deliveredBaggages"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="∀b⦂Baggages·b∈Baggages⇒b∈baggagesAtAirport∨b∉baggagesAtAirport"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="∀b⦂Baggages·b∈Baggages∧b∉baggagesAtAirport⇒b∉inspectedBaggages∧b∉notInspectedBaggages"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨((bag∈notDeliveredBaggages∧bag∈inspectionApproved⇒bag∈dom(genericTarget)∧genericTarget∈Baggages ⇸ LocationTypes)∧((bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved⇒bag∈dom(genericTarget)∧genericTarget∈Baggages ⇸ LocationTypes)))"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="∀b⦂Baggages·⊤∧¬b∈baggagesAtAirport⇒¬b∈deliveredBaggages∧¬b∈notDeliveredBaggages"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒¬bag∈baggagesAtAirport∨bag∈notDeliveredBaggages∨bag∈deliveredBaggages"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="∀b⦂Baggages·b∈inspectionDisapproved⇒b∉deliveredBaggages"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒bag∉baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=airplane)∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages∧bag∈inspectionDisapproved)"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="∀b⦂Baggages·⊤∧¬b∈baggagesAtAirport⇒¬b∈inspectedBaggages∧¬b∈notInspectedBaggages"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∃bag⦂Baggages·bag∈Baggages⇒bag∉baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=airplane)∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages∧bag∈inspectionDisapproved)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀bag⦂Baggages·bag∈deliveredToPlane⇒genericTarget(bag)=airplane"/>
+<org.eventb.core.prPred name="p45" org.eventb.core.predicate="∀bag⦂Baggages·¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=airplane)∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages∧bag∈inspectionDisapproved)"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="claim≠counter∧claim≠airplane∧counter≠airplane"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="genericSource∈baggagesAtAirport → LocationTypes ∖ {claim}"/>
+<org.eventb.core.prPred name="p51" org.eventb.core.predicate="deliveredToPlane⊆deliveredToClaim∪deliveredToPlane"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒bag∉baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages)∨bag∈deliveredBaggages∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages)"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒bag∉baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨((bag∈notDeliveredBaggages∧bag∈inspectionApproved⇒bag∈dom(genericTarget)∧genericTarget∈Baggages ⇸ LocationTypes)∧((bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved⇒bag∈dom(genericTarget)∧genericTarget∈Baggages ⇸ LocationTypes)))"/>
+<org.eventb.core.prPred name="p50" org.eventb.core.predicate="deliveredToPlane⊆deliveredBaggages"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages)∨bag∈deliveredBaggages"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒bag∉baggagesAtAirport∨bag∈notDeliveredBaggages∨bag∈deliveredBaggages"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="∀b⦂Baggages·b∈inspectionDisapproved⇒¬b∈deliveredBaggages"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="∀b⦂Baggages·b∈Baggages∧¬b∈baggagesAtAirport⇒¬b∈deliveredBaggages∧¬b∈notDeliveredBaggages"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="(∀bag⦂Baggages·bag∈Baggages)⇒(∃bag⦂Baggages·¬bag∈baggagesAtAirport)∨(∃bag⦂Baggages·bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(∃bag⦂Baggages·bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(∃bag⦂Baggages·bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=airplane)∨(∃bag⦂Baggages·bag∈deliveredToPlane)∨(∃bag⦂Baggages·bag∈deliveredToClaim)∨(∃bag⦂Baggages·bag∈notDeliveredBaggages∧bag∈inspectedBaggages∧bag∈inspectionDisapproved)"/>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="∀bag⦂Baggages·¬bag∈baggagesAtAirport∨bag∈notDeliveredBaggages∨bag∈deliveredBaggages"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬claim=airplane"/>
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="∀b⦂Baggages·¬b∈baggagesAtAirport⇒¬b∈inspectedBaggages∧¬b∈notInspectedBaggages"/>
+<org.eventb.core.prPred name="p48" org.eventb.core.predicate="deliveredToClaim⊆deliveredBaggages"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="∀bag⦂Baggages·⊤⇒¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved)∨bag∈deliveredBaggages∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages∧bag∈inspectionDisapproved)"/>
+<org.eventb.core.prPred name="p44" org.eventb.core.predicate="∀bag⦂Baggages·¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved)∨bag∈deliveredBaggages∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages∧bag∈inspectionDisapproved)"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="∀b⦂Baggages·¬b∈inspectedBaggages⇒¬b∈deliveredBaggages"/>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="⊤⇒(∃bag⦂Baggages·¬bag∈baggagesAtAirport)∨(∃bag⦂Baggages·bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(∃bag⦂Baggages·bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(∃bag⦂Baggages·bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=airplane)∨(∃bag⦂Baggages·bag∈deliveredToPlane)∨(∃bag⦂Baggages·bag∈deliveredToClaim)∨(∃bag⦂Baggages·bag∈notDeliveredBaggages∧bag∈inspectedBaggages∧bag∈inspectionDisapproved)"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=airplane)∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages∧bag∈inspectionDisapproved)"/>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="∀b⦂Baggages·¬b∈baggagesAtAirport⇒¬b∈deliveredBaggages∧¬b∈notDeliveredBaggages"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="∀b⦂Baggages·b∉inspectedBaggages⇒b∉deliveredBaggages"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="deliveredToClaim∩deliveredToPlane=(∅ ⦂ ℙ(Baggages))"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="baggagesAtAirport⊆Baggages"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="∀bag⦂Baggages·bag∈deliveredToClaim⇒genericTarget(bag)=claim"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="∀bag⦂Baggages·⊤⇒¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨((bag∈notDeliveredBaggages∧bag∈inspectionApproved⇒bag∈dom(genericTarget)∧genericTarget∈Baggages ⇸ LocationTypes)∧((bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved⇒bag∈dom(genericTarget)∧genericTarget∈Baggages ⇸ LocationTypes)))"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="∀b⦂Baggages·b∈Baggages∧¬b∈baggagesAtAirport⇒¬b∈inspectedBaggages∧¬b∈notInspectedBaggages"/>
+<org.eventb.core.prPred name="p49" org.eventb.core.predicate="deliveredToClaim⊆deliveredToClaim∪deliveredToPlane"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="∀b⦂Baggages·b∈Baggages∧b∉baggagesAtAirport⇒b∉deliveredBaggages∧b∉notDeliveredBaggages"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="dlf/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="bag" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6" org.eventb.core.prSets="Baggages,LocationTypes">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p26">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p7" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8,p9,p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13"/>
+<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p14" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p15"/>
+<org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p17"/>
+<org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p18" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p19"/>
+<org.eventb.core.prHypAction name="REWRITE6" org.eventb.core.prHidden="p20" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21"/>
+<org.eventb.core.prHypAction name="REWRITE7" org.eventb.core.prHidden="p22" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23"/>
+<org.eventb.core.prHypAction name="REWRITE8" org.eventb.core.prHidden="p24" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p25"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p26" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p33">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p27"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p28"/>
+<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p15" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p29"/>
+<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p17" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p30"/>
+<org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p31"/>
+<org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p25" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p32"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p33" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p39">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p28" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p34"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p29" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p35"/>
+<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p30" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p36"/>
+<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p31" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p37"/>
+<org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p32" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p38"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees bag)" org.eventb.core.prGoal="p39" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p40">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with deliveredToClaim∪deliveredToPlane=deliveredBaggages" org.eventb.core.prHyps="p2">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p41" org.eventb.core.prInfHyps="p42"/>
+<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p43" org.eventb.core.prInfHyps="p44"/>
+<org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p41,p43"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p42"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p44"/>
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p40" org.eventb.core.prHyps="p6,p1,p2,p3,p5,p4">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="airplane" org.eventb.core.type="LocationTypes"/>
+<org.eventb.core.prIdent name="baggagesAtAirport" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="claim" org.eventb.core.type="LocationTypes"/>
+<org.eventb.core.prIdent name="counter" org.eventb.core.type="LocationTypes"/>
+<org.eventb.core.prIdent name="deliveredBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="deliveredToClaim" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="deliveredToPlane" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="genericSource" org.eventb.core.type="ℙ(Baggages×LocationTypes)"/>
+<org.eventb.core.prIdent name="genericTarget" org.eventb.core.type="ℙ(Baggages×LocationTypes)"/>
+<org.eventb.core.prIdent name="inspectionApproved" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="notDeliveredBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="notInspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬counter=airplane"/>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="∀bag⦂Baggages·¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨((bag∈notDeliveredBaggages∧bag∈inspectionApproved⇒bag∈dom(genericTarget)∧genericTarget∈Baggages ⇸ LocationTypes)∧((bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved⇒bag∈dom(genericTarget)∧genericTarget∈Baggages ⇸ LocationTypes)))"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="∀bag⦂Baggages·⊤⇒¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages)∨bag∈deliveredBaggages">
+<org.eventb.core.prIdent name="inspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p44" org.eventb.core.predicate="deliveredToPlane⊆deliveredToClaim∪deliveredToPlane"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒bag∉baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages)∨bag∈deliveredBaggages∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages)">
+<org.eventb.core.prIdent name="inspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="∀bag⦂Baggages·⊤⇒¬bag∈baggagesAtAirport∨bag∈notDeliveredBaggages∨bag∈deliveredBaggages"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒bag∉baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨((bag∈notDeliveredBaggages∧bag∈inspectionApproved⇒bag∈dom(genericTarget)∧genericTarget∈Baggages ⇸ LocationTypes)∧((bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved⇒bag∈dom(genericTarget)∧genericTarget∈Baggages ⇸ LocationTypes)))"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="genericTarget∈baggagesAtAirport → LocationTypes ∖ {counter}"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="∀bag⦂Baggages·¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages)∨bag∈deliveredBaggages">
+<org.eventb.core.prIdent name="inspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="deliveredToPlane⊆deliveredBaggages"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages)∨bag∈deliveredBaggages">
+<org.eventb.core.prIdent name="inspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒bag∉baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved)∨bag∈deliveredBaggages∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages∧bag∈inspectionDisapproved)">
+<org.eventb.core.prIdent name="inspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="inspectionDisapproved" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒bag∉baggagesAtAirport∨bag∈notDeliveredBaggages∨bag∈deliveredBaggages"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="∀b⦂Baggages·b∈inspectionDisapproved⇒¬b∈deliveredBaggages">
+<org.eventb.core.prIdent name="inspectionDisapproved" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved)∨bag∈deliveredBaggages∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages∧bag∈inspectionDisapproved)">
+<org.eventb.core.prIdent name="inspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="inspectionDisapproved" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="∀b⦂Baggages·b∈Baggages∧¬b∈baggagesAtAirport⇒¬b∈deliveredBaggages∧¬b∈notDeliveredBaggages"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬claim=counter"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="deliveredToClaim∪deliveredToPlane=deliveredBaggages"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="∀b⦂Baggages·b∈Baggages⇒b∈baggagesAtAirport∨b∉baggagesAtAirport"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="∀bag⦂Baggages·¬bag∈baggagesAtAirport∨bag∈notDeliveredBaggages∨bag∈deliveredBaggages"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬claim=airplane"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="∀b⦂Baggages·¬b∈baggagesAtAirport⇒¬b∈inspectedBaggages∧¬b∈notInspectedBaggages">
+<org.eventb.core.prIdent name="inspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨((bag∈notDeliveredBaggages∧bag∈inspectionApproved⇒bag∈dom(genericTarget)∧genericTarget∈Baggages ⇸ LocationTypes)∧((bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved⇒bag∈dom(genericTarget)∧genericTarget∈Baggages ⇸ LocationTypes)))">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="deliveredToClaim⊆deliveredBaggages"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="∀b⦂Baggages·b∈Baggages∧b∉baggagesAtAirport⇒b∉inspectedBaggages∧b∉notInspectedBaggages">
+<org.eventb.core.prIdent name="inspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨((bag∈notDeliveredBaggages∧bag∈inspectionApproved⇒bag∈dom(genericTarget)∧genericTarget∈Baggages ⇸ LocationTypes)∧((bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved⇒bag∈dom(genericTarget)∧genericTarget∈Baggages ⇸ LocationTypes)))"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="∀bag⦂Baggages·⊤⇒¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved)∨bag∈deliveredBaggages∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages∧bag∈inspectionDisapproved)">
+<org.eventb.core.prIdent name="inspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="inspectionDisapproved" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="∀bag⦂Baggages·¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved)∨bag∈deliveredBaggages∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages∧bag∈inspectionDisapproved)">
+<org.eventb.core.prIdent name="inspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="inspectionDisapproved" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="∀b⦂Baggages·⊤∧¬b∈baggagesAtAirport⇒¬b∈deliveredBaggages∧¬b∈notDeliveredBaggages"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="∀b⦂Baggages·¬b∈inspectedBaggages⇒¬b∈deliveredBaggages">
+<org.eventb.core.prIdent name="inspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒¬bag∈baggagesAtAirport∨bag∈notDeliveredBaggages∨bag∈deliveredBaggages"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="∀b⦂Baggages·b∈inspectionDisapproved⇒b∉deliveredBaggages">
+<org.eventb.core.prIdent name="inspectionDisapproved" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="∀b⦂Baggages·⊤∧¬b∈baggagesAtAirport⇒¬b∈inspectedBaggages∧¬b∈notInspectedBaggages">
+<org.eventb.core.prIdent name="inspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="∀b⦂Baggages·¬b∈baggagesAtAirport⇒¬b∈deliveredBaggages∧¬b∈notDeliveredBaggages"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="∀b⦂Baggages·b∉inspectedBaggages⇒b∉deliveredBaggages">
+<org.eventb.core.prIdent name="inspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="deliveredToClaim∩deliveredToPlane=(∅ ⦂ ℙ(Baggages))"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀bag⦂Baggages·bag∈deliveredToPlane⇒genericTarget(bag)=airplane"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="baggagesAtAirport⊆Baggages"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀bag⦂Baggages·bag∈deliveredToClaim⇒genericTarget(bag)=claim"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="claim≠counter∧claim≠airplane∧counter≠airplane"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="∀bag⦂Baggages·⊤⇒¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨((bag∈notDeliveredBaggages∧bag∈inspectionApproved⇒bag∈dom(genericTarget)∧genericTarget∈Baggages ⇸ LocationTypes)∧((bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved⇒bag∈dom(genericTarget)∧genericTarget∈Baggages ⇸ LocationTypes)))"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="∀b⦂Baggages·b∈Baggages∧¬b∈baggagesAtAirport⇒¬b∈inspectedBaggages∧¬b∈notInspectedBaggages">
+<org.eventb.core.prIdent name="inspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="deliveredToClaim⊆deliveredToClaim∪deliveredToPlane"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="genericSource∈baggagesAtAirport → LocationTypes ∖ {claim}"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="∀b⦂Baggages·b∈Baggages∧b∉baggagesAtAirport⇒b∉deliveredBaggages∧b∉notDeliveredBaggages"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="dlf/THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="bag" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38" org.eventb.core.prSets="Baggages,LocationTypes" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p50">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p36" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p39,p40,p41"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p42"/>
+<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p38" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p43"/>
+<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p11" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p44"/>
+<org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p23" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p45"/>
+<org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p31" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p46"/>
+<org.eventb.core.prHypAction name="REWRITE6" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p47"/>
+<org.eventb.core.prHypAction name="REWRITE7" org.eventb.core.prHidden="p28" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p48"/>
+<org.eventb.core.prHypAction name="REWRITE8" org.eventb.core.prHidden="p10" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p49"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p50" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p57">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p51"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p43" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p52"/>
+<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p44" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p53"/>
+<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p45" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p54"/>
+<org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p47" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p55"/>
+<org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p49" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p56"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p57" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p63">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p52" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p58"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p53" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p59"/>
+<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p54" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p60"/>
+<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p55" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p61"/>
+<org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p56" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p62"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees bag)" org.eventb.core.prGoal="p63" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p64">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with deliveredToClaim∪deliveredToPlane=deliveredBaggages" org.eventb.core.prHyps="p14">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p21" org.eventb.core.prInfHyps="p65"/>
+<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p9" org.eventb.core.prInfHyps="p66"/>
+<org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p9,p21"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p65"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p66"/>
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="lae in goal" org.eventb.core.prGoal="p64" org.eventb.core.prHyps="p12">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p67">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="remove ∈ in goal" org.eventb.core.prGoal="p67" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p68">
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ / ∨ distribution in goal" org.eventb.core.prGoal="p68" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p69">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p69" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p70">
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ / ∨ distribution in goal" org.eventb.core.prGoal="p70" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p71">
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ / ∨ distribution in goal" org.eventb.core.prGoal="p71" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p72">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p72" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p73">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p73" org.eventb.core.prHyps="p22,p13,p18,p1,p2,p24,p17,p30,p29,p19,p6,p25,p4,p26,p27,p32,p15,p16,p12,p20,p7,p5,p37,p8,p21,p9,p14,p33,p35,p34,p39,p40,p41,p46,p48,p58,p59,p60,p61,p62">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p74">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p74" org.eventb.core.prHyps="p22,p13,p18,p1,p2,p24,p17,p30,p29,p19,p6,p25,p4,p26,p27,p32,p15,p16,p12,p20,p7,p5,p37,p8,p21,p9,p14,p33,p35,p34,p39,p40,p41,p46,p48,p58,p59,p60,p61,p62">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name=")" org.eventb.core.prGoal="p75">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p75" org.eventb.core.prHyps="p22,p13,p18,p1,p2,p24,p17,p30,p29,p19,p6,p25,p4,p26,p27,p32,p15,p16,p12,p20,p7,p5,p37,p8,p21,p9,p14,p33,p35,p34,p39,p40,p41,p46,p48,p58,p59,p60,p61,p62">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="6"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p76">
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ / ∨ distribution in goal" org.eventb.core.prGoal="p76" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p77">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p77" org.eventb.core.prHyps="p22,p13,p18,p1,p2,p24,p17,p30,p29,p19,p6,p25,p4,p26,p27,p32,p15,p16,p12,p20,p7,p5,p37,p8,p21,p9,p14,p33,p35,p34,p39,p40,p41,p46,p48,p58,p59,p60,p61,p62">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p78">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p78" org.eventb.core.prHyps="p22,p13,p18,p1,p2,p24,p17,p30,p29,p19,p6,p25,p4,p26,p27,p32,p15,p16,p12,p20,p7,p5,p37,p8,p21,p9,p14,p33,p35,p34,p39,p40,p41,p46,p48,p58,p59,p60,p61,p62">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name=")" org.eventb.core.prGoal="p79">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p79" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p80">
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ / ∨ distribution in goal" org.eventb.core.prGoal="p80" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p81">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p81" org.eventb.core.prHyps="p22,p13,p18,p1,p2,p24,p17,p30,p29,p19,p6,p25,p4,p26,p27,p32,p15,p16,p12,p20,p7,p5,p37,p8,p21,p9,p14,p33,p35,p34,p39,p40,p41,p46,p48,p58,p59,p60,p61,p62">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p82">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p82" org.eventb.core.prHyps="p22,p13,p18,p1,p2,p24,p17,p30,p29,p19,p6,p25,p4,p26,p27,p32,p15,p16,p12,p20,p7,p5,p37,p8,p21,p9,p14,p33,p35,p34,p39,p40,p41,p46,p48,p58,p59,p60,p61,p62">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name=")" org.eventb.core.prGoal="p83">
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ / ∨ distribution in goal" org.eventb.core.prGoal="p83" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p84">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p84" org.eventb.core.prHyps="p22,p13,p18,p1,p2,p24,p17,p30,p29,p19,p6,p25,p4,p26,p27,p32,p15,p16,p12,p20,p7,p5,p37,p8,p21,p9,p14,p33,p35,p34,p39,p40,p41,p46,p48,p58,p59,p60,p61,p62">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p85">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p85" org.eventb.core.prHyps="p22,p13,p18,p1,p2,p24,p17,p30,p29,p19,p6,p25,p4,p26,p27,p32,p15,p16,p12,p20,p7,p5,p37,p8,p21,p9,p14,p33,p35,p34,p39,p40,p41,p46,p48,p58,p59,p60,p61,p62">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name=")" org.eventb.core.prGoal="p86">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="lae in goal" org.eventb.core.prGoal="p86" org.eventb.core.prHyps="p4">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p87">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="lae in goal" org.eventb.core.prGoal="p87" org.eventb.core.prHyps="p12">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p88">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p88" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p89">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="remove ∈ in goal" org.eventb.core.prGoal="p89" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p90">
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ / ∨ distribution in goal" org.eventb.core.prGoal="p90" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p91">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p91" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p92">
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ / ∨ distribution in goal" org.eventb.core.prGoal="p92" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p93">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p93" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p94">
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ / ∨ distribution in goal" org.eventb.core.prGoal="p94" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p95">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p95" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p96">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p96" org.eventb.core.prHyps="p22,p13,p18,p1,p2,p24,p17,p30,p29,p19,p6,p25,p4,p26,p27,p32,p15,p16,p12,p20,p7,p5,p37,p8,p21,p9,p14,p33,p35,p34,p39,p40,p41,p46,p48,p58,p59,p60,p61,p62">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p97">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p97" org.eventb.core.prHyps="p22,p13,p18,p1,p2,p24,p17,p30,p29,p19,p6,p25,p4,p26,p27,p32,p15,p16,p12,p20,p7,p5,p37,p8,p21,p9,p14,p33,p35,p34,p39,p40,p41,p46,p48,p58,p59,p60,p61,p62">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p98">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p98" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p99">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p99" org.eventb.core.prHyps="p22,p13,p18,p1,p2,p24,p17,p30,p29,p19,p6,p25,p4,p26,p27,p32,p15,p16,p12,p20,p7,p5,p37,p8,p21,p9,p14,p33,p35,p34,p39,p40,p41,p46,p48,p58,p59,p60,p61,p62">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="2"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1.1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1.1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1.1.1.0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1.1.1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="2"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="3"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="6"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="7"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="6.1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="6.1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="6.1.1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="airplane" org.eventb.core.type="LocationTypes"/>
+<org.eventb.core.prIdent name="baggagesAtAirport" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="claim" org.eventb.core.type="LocationTypes"/>
+<org.eventb.core.prIdent name="counter" org.eventb.core.type="LocationTypes"/>
+<org.eventb.core.prIdent name="deliveredBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="deliveredToClaim" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="deliveredToPlane" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="genericSource" org.eventb.core.type="ℙ(Baggages×LocationTypes)"/>
+<org.eventb.core.prIdent name="genericTarget" org.eventb.core.type="ℙ(Baggages×LocationTypes)"/>
+<org.eventb.core.prIdent name="inspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="inspectionApproved" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="inspectionDisapproved" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="notDeliveredBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prIdent name="notInspectedBaggages" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.prPred name="p98" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈inspectionApproved)∨bag∈inspectionDisapproved∨bag∈notInspectedBaggages∨genericTarget(bag)=claim∨genericTarget(bag)=airplane∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨bag∈inspectionDisapproved">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p91" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨((bag∈notInspectedBaggages∧bag∈inspectionApproved)∨(bag∈notInspectedBaggages∧bag∈inspectionDisapproved)∨(bag∈notInspectedBaggages∧bag∈notInspectedBaggages))∨genericTarget(bag)=claim∨genericTarget(bag)=airplane∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨bag∈inspectionDisapproved">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p53" org.eventb.core.predicate="∀bag⦂Baggages·⊤⇒¬bag∈baggagesAtAirport∨bag∈notDeliveredBaggages∨bag∈deliveredBaggages"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="inspectedBaggages⊆baggagesAtAirport"/>
+<org.eventb.core.prPred name="p61" org.eventb.core.predicate="∀bag⦂Baggages·¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages)∨bag∈deliveredBaggages"/>
+<org.eventb.core.prPred name="p80" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=airplane)∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨bag∈inspectionDisapproved">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒bag∉baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved)∨bag∈deliveredBaggages∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages∧bag∈inspectionDisapproved)"/>
+<org.eventb.core.prPred name="p57" org.eventb.core.predicate="∀bag⦂Baggages·⊤⇒¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=airplane)∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages∧bag∈inspectionDisapproved)"/>
+<org.eventb.core.prPred name="p88" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈(inspectionApproved∪inspectionDisapproved)∪notInspectedBaggages)∨genericTarget(bag)=claim∨genericTarget(bag)=airplane∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨bag∈inspectionDisapproved">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="¬claim=counter"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="finite(LocationTypes)"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="∀b⦂Baggages·b∈inspectionDisapproved⇒b∉deliveredBaggages"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒bag∉baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=airplane)∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages∧bag∈inspectionDisapproved)"/>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="finite(deliveredBaggages)"/>
+<org.eventb.core.prPred name="p54" org.eventb.core.predicate="∀b⦂Baggages·⊤∧¬b∈baggagesAtAirport⇒¬b∈inspectedBaggages∧¬b∈notInspectedBaggages"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="deliveredBaggages∩notDeliveredBaggages=(∅ ⦂ ℙ(Baggages))"/>
+<org.eventb.core.prPred name="p73" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=airplane)∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨bag∈notDeliveredBaggages">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p99" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈inspectionApproved)∨bag∈inspectionDisapproved∨bag∈notInspectedBaggages∨genericTarget(bag)=claim∨genericTarget(bag)=airplane∨bag∈deliveredToPlane∨bag∈deliveredToClaim">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="claim≠counter∧claim≠airplane∧counter≠airplane"/>
+<org.eventb.core.prPred name="p76" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=airplane)∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧bag∈inspectionDisapproved)∨bag∈inspectionDisapproved">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p96" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨bag∈notInspectedBaggages∨genericTarget(bag)=claim∨genericTarget(bag)=airplane∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨bag∈inspectionDisapproved">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p68" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=airplane)∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨(bag∈notDeliveredBaggages∧(bag∈inspectionApproved∨bag∈inspectionDisapproved)∧bag∈inspectionDisapproved)">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(baggagesAtAirport)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒bag∉baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages)∨bag∈deliveredBaggages∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages)"/>
+<org.eventb.core.prPred name="p83" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨genericTarget(bag)=airplane∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨bag∈inspectionDisapproved">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="deliveredToPlane⊆deliveredBaggages"/>
+<org.eventb.core.prPred name="p92" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈inspectionApproved)∨(bag∈notInspectedBaggages∧bag∈inspectionDisapproved)∨bag∈notInspectedBaggages∨genericTarget(bag)=claim∨genericTarget(bag)=airplane∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨bag∈inspectionDisapproved">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p81" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨bag∈notDeliveredBaggages∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨bag∈inspectionDisapproved">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="¬claim=airplane"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="deliveredToClaim⊆deliveredBaggages"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬finite(Baggages)"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="notDeliveredBaggages⊆baggagesAtAirport"/>
+<org.eventb.core.prPred name="p56" org.eventb.core.predicate="∀bag⦂Baggages·⊤⇒¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved)∨bag∈deliveredBaggages∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages∧bag∈inspectionDisapproved)"/>
+<org.eventb.core.prPred name="p94" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈inspectionApproved)∨bag∈notInspectedBaggages∨genericTarget(bag)=claim∨genericTarget(bag)=airplane∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨bag∈inspectionDisapproved">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="∀b⦂Baggages·b∈deliveredBaggages⇒b∈inspectedBaggages"/>
+<org.eventb.core.prPred name="p72" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=airplane)∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨bag∈notDeliveredBaggages∨bag∈notDeliveredBaggages">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p50" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=airplane)∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages∧bag∈inspectionDisapproved)"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="∀b⦂Baggages·b∉inspectedBaggages⇒b∉deliveredBaggages"/>
+<org.eventb.core.prPred name="p51" org.eventb.core.predicate="baggagesAtAirport⊆Baggages"/>
+<org.eventb.core.prPred name="p78" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=airplane)∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨bag∈inspectionApproved∨bag∈inspectionDisapproved">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p97" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨bag∈inspectionApproved∨bag∈notInspectedBaggages∨genericTarget(bag)=claim∨genericTarget(bag)=airplane∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨bag∈inspectionDisapproved">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="¬counter=airplane"/>
+<org.eventb.core.prPred name="p55" org.eventb.core.predicate="∀bag⦂Baggages·⊤⇒¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages)∨bag∈deliveredBaggages"/>
+<org.eventb.core.prPred name="p75" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=airplane)∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨bag∈inspectionDisapproved∨bag∈notDeliveredBaggages">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p85" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨bag∈inspectionApproved∨genericTarget(bag)=airplane∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨bag∈inspectionDisapproved">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="deliveredBaggages⊆baggagesAtAirport"/>
+<org.eventb.core.prPred name="p74" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=airplane)∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨bag∈inspectionApproved∨bag∈notDeliveredBaggages">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="inspectedBaggages∪notInspectedBaggages=baggagesAtAirport"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="∀b⦂Baggages·b∈deliveredBaggages⇒b∈inspectionApproved"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="genericTarget∈baggagesAtAirport → LocationTypes ∖ {counter}"/>
+<org.eventb.core.prPred name="p77" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=airplane)∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨bag∈notDeliveredBaggages∨bag∈inspectionDisapproved">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p69" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=airplane)∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨((bag∈notDeliveredBaggages∧bag∈inspectionApproved∧bag∈inspectionDisapproved)∨(bag∈notDeliveredBaggages∧bag∈inspectionDisapproved∧bag∈inspectionDisapproved))">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="inspectionApproved∪inspectionDisapproved=inspectedBaggages"/>
+<org.eventb.core.prPred name="p64" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=airplane)∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages∧bag∈inspectionDisapproved)">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p49" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved)∨bag∈deliveredBaggages∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages∧bag∈inspectionDisapproved)"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="deliveredToClaim∪deliveredToPlane=deliveredBaggages"/>
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="∀b⦂Baggages·b∈Baggages⇒b∈baggagesAtAirport∨b∉baggagesAtAirport"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="inspectionApproved⊆inspectedBaggages"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="inspectionDisapproved⊆inspectedBaggages"/>
+<org.eventb.core.prPred name="p79" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=airplane)∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨bag∈inspectionDisapproved∨bag∈inspectionDisapproved">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="∀b⦂Baggages·b∈Baggages∧b∉baggagesAtAirport⇒b∉inspectedBaggages∧b∉notInspectedBaggages"/>
+<org.eventb.core.prPred name="p52" org.eventb.core.predicate="∀b⦂Baggages·⊤∧¬b∈baggagesAtAirport⇒¬b∈deliveredBaggages∧¬b∈notDeliveredBaggages"/>
+<org.eventb.core.prPred name="p82" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨bag∈inspectionApproved∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨bag∈inspectionDisapproved">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p44" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒¬bag∈baggagesAtAirport∨bag∈notDeliveredBaggages∨bag∈deliveredBaggages"/>
+<org.eventb.core.prPred name="p93" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈inspectionApproved)∨bag∈notInspectedBaggages∨bag∈notInspectedBaggages∨genericTarget(bag)=claim∨genericTarget(bag)=airplane∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨bag∈inspectionDisapproved">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p90" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧(bag∈inspectionApproved∨bag∈inspectionDisapproved∨bag∈notInspectedBaggages))∨genericTarget(bag)=claim∨genericTarget(bag)=airplane∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨bag∈inspectionDisapproved">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="∀bag⦂Baggages·bag∈deliveredToPlane⇒genericTarget(bag)=airplane"/>
+<org.eventb.core.prPred name="p63" org.eventb.core.predicate="∀bag⦂Baggages·¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=airplane)∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages∧bag∈inspectionDisapproved)"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="genericSource∈baggagesAtAirport → LocationTypes ∖ {claim}"/>
+<org.eventb.core.prPred name="p66" org.eventb.core.predicate="deliveredToPlane⊆deliveredToClaim∪deliveredToPlane"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀b⦂Baggages·b∈inspectionDisapproved⇒b∈notDeliveredBaggages"/>
+<org.eventb.core.prPred name="p47" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages)∨bag∈deliveredBaggages"/>
+<org.eventb.core.prPred name="p89" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈inspectionApproved∪inspectionDisapproved∪notInspectedBaggages)∨genericTarget(bag)=claim∨genericTarget(bag)=airplane∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨bag∈inspectionDisapproved">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="∀bag⦂Baggages·bag∈Baggages⇒bag∉baggagesAtAirport∨bag∈notDeliveredBaggages∨bag∈deliveredBaggages"/>
+<org.eventb.core.prPred name="p48" org.eventb.core.predicate="∀b⦂Baggages·b∈inspectionDisapproved⇒¬b∈deliveredBaggages"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="LocationTypes={claim,counter,airplane}"/>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="∀b⦂Baggages·b∈Baggages∧¬b∈baggagesAtAirport⇒¬b∈deliveredBaggages∧¬b∈notDeliveredBaggages"/>
+<org.eventb.core.prPred name="p59" org.eventb.core.predicate="∀bag⦂Baggages·¬bag∈baggagesAtAirport∨bag∈notDeliveredBaggages∨bag∈deliveredBaggages"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="deliveredBaggages∪notDeliveredBaggages=baggagesAtAirport"/>
+<org.eventb.core.prPred name="p60" org.eventb.core.predicate="∀b⦂Baggages·¬b∈baggagesAtAirport⇒¬b∈inspectedBaggages∧¬b∈notInspectedBaggages"/>
+<org.eventb.core.prPred name="p71" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=airplane)∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧bag∈inspectionDisapproved)∨bag∈notDeliveredBaggages">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="finite(notDeliveredBaggages)"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="inspectionApproved∩inspectionDisapproved=(∅ ⦂ ℙ(Baggages))"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="notInspectedBaggages⊆baggagesAtAirport"/>
+<org.eventb.core.prPred name="p62" org.eventb.core.predicate="∀bag⦂Baggages·¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved)∨bag∈deliveredBaggages∨(bag∈notDeliveredBaggages∧bag∈inspectedBaggages∧bag∈inspectionDisapproved)"/>
+<org.eventb.core.prPred name="p46" org.eventb.core.predicate="∀b⦂Baggages·¬b∈inspectedBaggages⇒¬b∈deliveredBaggages"/>
+<org.eventb.core.prPred name="p87" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈inspectedBaggages∪notInspectedBaggages)∨genericTarget(bag)=claim∨genericTarget(bag)=airplane∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨bag∈inspectionDisapproved">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p95" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨bag∈notInspectedBaggages∨bag∈notInspectedBaggages∨genericTarget(bag)=claim∨genericTarget(bag)=airplane∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨bag∈inspectionDisapproved">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="inspectedBaggages∩notInspectedBaggages=(∅ ⦂ ℙ(Baggages))"/>
+<org.eventb.core.prPred name="p58" org.eventb.core.predicate="∀b⦂Baggages·¬b∈baggagesAtAirport⇒¬b∈deliveredBaggages∧¬b∈notDeliveredBaggages"/>
+<org.eventb.core.prPred name="p67" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=airplane)∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∪inspectionDisapproved∧bag∈inspectionDisapproved)">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p70" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=claim)∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧genericTarget(bag)=airplane)∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨(bag∈notDeliveredBaggages∧bag∈inspectionApproved∧bag∈inspectionDisapproved)∨(bag∈notDeliveredBaggages∧bag∈inspectionDisapproved)">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p84" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨bag∈notDeliveredBaggages∨genericTarget(bag)=airplane∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨bag∈inspectionDisapproved">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="inspectedBaggages=(∅ ⦂ ℙ(Baggages))⇒deliveredBaggages=(∅ ⦂ ℙ(Baggages))"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="deliveredToClaim∩deliveredToPlane=(∅ ⦂ ℙ(Baggages))"/>
+<org.eventb.core.prPred name="p86" org.eventb.core.predicate="¬bag∈baggagesAtAirport∨(bag∈notInspectedBaggages∧bag∈baggagesAtAirport)∨genericTarget(bag)=claim∨genericTarget(bag)=airplane∨bag∈deliveredToPlane∨bag∈deliveredToClaim∨bag∈inspectionDisapproved">
+<org.eventb.core.prIdent name="bag" org.eventb.core.type="Baggages"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="∀bag⦂Baggages·bag∈deliveredToClaim⇒genericTarget(bag)=claim"/>
+<org.eventb.core.prPred name="p45" org.eventb.core.predicate="∀b⦂Baggages·b∈Baggages∧¬b∈baggagesAtAirport⇒¬b∈inspectedBaggages∧¬b∈notInspectedBaggages"/>
+<org.eventb.core.prPred name="p65" org.eventb.core.predicate="deliveredToClaim⊆deliveredToClaim∪deliveredToPlane"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="∀b⦂Baggages·b∈Baggages∧b∉baggagesAtAirport⇒b∉deliveredBaggages∧b∉notDeliveredBaggages"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.locEq"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.rmL1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.andOrDistRewrites"/>
+<org.eventb.core.prReas name="r7" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+</org.eventb.core.prProof>
 </org.eventb.core.prFile>
