@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="145">
+<org.eventb.core.poFile org.eventb.core.poStamp="152">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="134">
 <org.eventb.core.poIdentifier name="Baggages" org.eventb.core.type="ℙ(Baggages)"/>
 <org.eventb.core.poPredicate name="Baggaget" org.eventb.core.predicate="¬finite(Baggages)" org.eventb.core.source="/baggages/context01.buc|org.eventb.core.contextFile#context01|org.eventb.core.axiom#_CQBVMWhPEeWccdfwySTGIg"/>
@@ -555,19 +555,17 @@
 <org.eventb.core.poIdentifier name="bag" org.eventb.core.type="Baggages"/>
 <org.eventb.core.poIdentifier name="inspectedBaggages'" org.eventb.core.type="ℙ(Baggages)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPinspectionDisapprovek" org.eventb.core.parentSet="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poPredicateSet#EVTIDENTinspectionDisapprovek" org.eventb.core.poStamp="144">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bag∈notInspectedBaggages" org.eventb.core.source="/baggages/machine04.bum|org.eventb.core.machineFile#machine04|org.eventb.core.event#_QOvVwGtjEeWJd8bCiR6tag|org.eventb.core.guard#_l2WXYWtjEeWJd8bCiR6tag"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="bag∈baggagesAtAirport" org.eventb.core.source="/baggages/machine04.bum|org.eventb.core.machineFile#machine04|org.eventb.core.event#_QOvVwGtjEeWJd8bCiR6tag|org.eventb.core.guard#_l2WXYmtjEeWJd8bCiR6tag"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPinspectionDisapprovek" org.eventb.core.parentSet="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poPredicateSet#EVTIDENTinspectionDisapprovek" org.eventb.core.poStamp="146">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bag∈notInspectedBaggages" org.eventb.core.source="/baggages/machine03.bum|org.eventb.core.machineFile#machine03|org.eventb.core.event#_lAke0GhWEeWccdfwySTGIg|org.eventb.core.guard#_lAke0mhWEeWccdfwySTGIg"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTinspectionDisapprovel" org.eventb.core.parentSet="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="144">
+<org.eventb.core.poPredicateSet name="EVTIDENTinspectionDisapprovel" org.eventb.core.parentSet="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="notInspectedBaggages'" org.eventb.core.type="ℙ(Baggages)"/>
 <org.eventb.core.poIdentifier name="inspectionDisapproved'" org.eventb.core.type="ℙ(Baggages)"/>
 <org.eventb.core.poIdentifier name="bag" org.eventb.core.type="Baggages"/>
 <org.eventb.core.poIdentifier name="inspectedBaggages'" org.eventb.core.type="ℙ(Baggages)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPinspectionDisapprovel" org.eventb.core.parentSet="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poPredicateSet#EVTIDENTinspectionDisapprovel" org.eventb.core.poStamp="144">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bag∈notInspectedBaggages" org.eventb.core.source="/baggages/machine04.bum|org.eventb.core.machineFile#machine04|org.eventb.core.event#_3AUwEGtjEeWJd8bCiR6tag|org.eventb.core.guard#_3AUwE2tjEeWJd8bCiR6tag"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="bag∈baggagesAtAirport" org.eventb.core.source="/baggages/machine04.bum|org.eventb.core.machineFile#machine04|org.eventb.core.event#_3AUwEGtjEeWJd8bCiR6tag|org.eventb.core.guard#_3AVXIGtjEeWJd8bCiR6tag"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPinspectionDisapprovel" org.eventb.core.parentSet="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poPredicateSet#EVTIDENTinspectionDisapprovel" org.eventb.core.poStamp="148">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bag∈notInspectedBaggages" org.eventb.core.source="/baggages/machine03.bum|org.eventb.core.machineFile#machine03|org.eventb.core.event#_lAke0GhWEeWccdfwySTGIg|org.eventb.core.guard#_lAke0mhWEeWccdfwySTGIg"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poSequent name="DELIVER_TO_CLAIM/grd6_01/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="144">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poPredicateSet#EVTHYPinspectionDisapprovem*"/>
@@ -871,7 +869,7 @@
 <org.eventb.core.poPredicateSet name="EVTALLHYPinspectionDisapprovep" org.eventb.core.parentSet="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poPredicateSet#EVTIDENTinspectionDisapprovep" org.eventb.core.poStamp="144">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bag∈deliveredToClaim" org.eventb.core.source="/baggages/machine05.bum|org.eventb.core.machineFile#machine05|org.eventb.core.event#_TatioWxMEeWOQ5bHJpn5_w|org.eventb.core.guard#_gmLaMWxTEeWOQ5bHJpn5_w"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="EXIT_NOT_DELIVERED_BAGGAGE/source/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="144">
+<org.eventb.core.poSequent name="EXIT_NOT_DELIVERED_BAGGAGE/source/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="152">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poPredicateSet#EVTALLHYPinspectionDisapproveq"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{bag} ⩤ source∈baggagesAtAirport ∖ {bag} → Locations" org.eventb.core.source="/baggages/machine06.bum|org.eventb.core.machineFile#machine06|org.eventb.core.invariant#_hF1C8G25EeWOg65G7XZUlg"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/baggages/machine05.bum|org.eventb.core.machineFile#machine05|org.eventb.core.event#_V3s6wGxSEeWOQ5bHJpn5_w"/>
@@ -880,7 +878,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poSequent#EXIT_NOT_DELIVERED_BAGGAGE\/source\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poPredicateSet#HYPcontext0e|org.eventb.core.poPredicate#PRD7"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="EXIT_NOT_DELIVERED_BAGGAGE/target/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="144">
+<org.eventb.core.poSequent name="EXIT_NOT_DELIVERED_BAGGAGE/target/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="152">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poPredicateSet#EVTALLHYPinspectionDisapproveq"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{bag} ⩤ target∈baggagesAtAirport ∖ {bag} → Locations" org.eventb.core.source="/baggages/machine06.bum|org.eventb.core.machineFile#machine06|org.eventb.core.invariant#_hF1C8W25EeWOg65G7XZUlg"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/baggages/machine05.bum|org.eventb.core.machineFile#machine05|org.eventb.core.event#_V3s6wGxSEeWOQ5bHJpn5_w"/>
@@ -889,7 +887,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poSequent#EXIT_NOT_DELIVERED_BAGGAGE\/target\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poPredicateSet#HYPcontext0e|org.eventb.core.poPredicate#PRD8"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="EXIT_NOT_DELIVERED_BAGGAGE/location/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="144">
+<org.eventb.core.poSequent name="EXIT_NOT_DELIVERED_BAGGAGE/location/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="152">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poPredicateSet#EVTALLHYPinspectionDisapproveq"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{bag} ⩤ location∈baggagesAtAirport ∖ {bag} → Locations" org.eventb.core.source="/baggages/machine06.bum|org.eventb.core.machineFile#machine06|org.eventb.core.invariant#_o-4igG28EeWOg65G7XZUlg"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/baggages/machine05.bum|org.eventb.core.machineFile#machine05|org.eventb.core.event#_V3s6wGxSEeWOQ5bHJpn5_w"/>
@@ -898,7 +896,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poSequent#EXIT_NOT_DELIVERED_BAGGAGE\/location\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poPredicateSet#HYPcontext0e|org.eventb.core.poPredicate#PRD9"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="EXIT_NOT_DELIVERED_BAGGAGE/LocationKnown/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="144">
+<org.eventb.core.poSequent name="EXIT_NOT_DELIVERED_BAGGAGE/LocationKnown/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="152">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poPredicateSet#EVTALLHYPinspectionDisapproveq"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b⦂Baggages·b∈baggagesAtAirport ∖ {bag}⇒({bag} ⩤ location)(b)∈counters∪claims∪airplanesAtAirport" org.eventb.core.source="/baggages/machine06.bum|org.eventb.core.machineFile#machine06|org.eventb.core.invariant#_BZU4IG29EeWOg65G7XZUlg"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/baggages/machine05.bum|org.eventb.core.machineFile#machine05|org.eventb.core.event#_V3s6wGxSEeWOQ5bHJpn5_w"/>
@@ -907,7 +905,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poSequent#EXIT_NOT_DELIVERED_BAGGAGE\/LocationKnown\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poPredicateSet#HYPcontext0f|org.eventb.core.poPredicate#PRD10"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="EXIT_NOT_DELIVERED_BAGGAGE/CorrectlyDelivered/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="144">
+<org.eventb.core.poSequent name="EXIT_NOT_DELIVERED_BAGGAGE/CorrectlyDelivered/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="152">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poPredicateSet#EVTALLHYPinspectionDisapproveq"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b⦂Baggages·b∈deliveredBaggages⇒({bag} ⩤ location)(b)=({bag} ⩤ target)(b)" org.eventb.core.source="/baggages/machine06.bum|org.eventb.core.machineFile#machine06|org.eventb.core.invariant#_-osC4G3EEeWMhKvwxzQnIQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/baggages/machine05.bum|org.eventb.core.machineFile#machine05|org.eventb.core.event#_V3s6wGxSEeWOQ5bHJpn5_w"/>
@@ -916,7 +914,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poSequent#EXIT_NOT_DELIVERED_BAGGAGE\/CorrectlyDelivered\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poPredicateSet#HYPcontext0g|org.eventb.core.poPredicate#PRD11"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="EXIT_NOT_DELIVERED_BAGGAGE/CorrectlyDeliveredToClaim/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="144">
+<org.eventb.core.poSequent name="EXIT_NOT_DELIVERED_BAGGAGE/CorrectlyDeliveredToClaim/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="152">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poPredicateSet#EVTALLHYPinspectionDisapproveq"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b⦂Baggages·b∈deliveredBaggages⇒(({bag} ⩤ genericTarget)(b)=claim⇒({bag} ⩤ location)(b)∈claims)" org.eventb.core.source="/baggages/machine06.bum|org.eventb.core.machineFile#machine06|org.eventb.core.invariant#_EbuYgG3FEeWMhKvwxzQnIQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/baggages/machine05.bum|org.eventb.core.machineFile#machine05|org.eventb.core.event#_V3s6wGxSEeWOQ5bHJpn5_w"/>
@@ -925,7 +923,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poSequent#EXIT_NOT_DELIVERED_BAGGAGE\/CorrectlyDeliveredToClaim\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poPredicateSet#HYPcontext0h|org.eventb.core.poPredicate#PRD12"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="EXIT_NOT_DELIVERED_BAGGAGE/CorrectlyDeliveredToPlane/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="144">
+<org.eventb.core.poSequent name="EXIT_NOT_DELIVERED_BAGGAGE/CorrectlyDeliveredToPlane/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="152">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poPredicateSet#EVTALLHYPinspectionDisapproveq"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b⦂Baggages·b∈deliveredBaggages⇒(({bag} ⩤ genericTarget)(b)=airplane⇒({bag} ⩤ location)(b)∈airplanesAtAirport)" org.eventb.core.source="/baggages/machine06.bum|org.eventb.core.machineFile#machine06|org.eventb.core.invariant#_f5YYwG3LEeWMhKvwxzQnIQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/baggages/machine05.bum|org.eventb.core.machineFile#machine05|org.eventb.core.event#_V3s6wGxSEeWOQ5bHJpn5_w"/>
@@ -946,10 +944,8 @@
 <org.eventb.core.poIdentifier name="inspectedBaggages'" org.eventb.core.type="ℙ(Baggages)"/>
 <org.eventb.core.poIdentifier name="genericSource'" org.eventb.core.type="ℙ(Baggages×LocationTypes)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPinspectionDisapproveq" org.eventb.core.parentSet="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poPredicateSet#EVTIDENTinspectionDisapproveq" org.eventb.core.poStamp="144">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bag∈notDeliveredBaggages" org.eventb.core.source="/baggages/machine04.bum|org.eventb.core.machineFile#machine04|org.eventb.core.event#_W5pcp2tlEeWJd8bCiR6tag|org.eventb.core.guard#_W5qDsWtlEeWJd8bCiR6tag"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="bag∈inspectedBaggages" org.eventb.core.source="/baggages/machine04.bum|org.eventb.core.machineFile#machine04|org.eventb.core.event#_W5pcp2tlEeWJd8bCiR6tag|org.eventb.core.guard#_W5qDsmtlEeWJd8bCiR6tag"/>
-<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="bag∈inspectionDisapproved" org.eventb.core.source="/baggages/machine04.bum|org.eventb.core.machineFile#machine04|org.eventb.core.event#_W5pcp2tlEeWJd8bCiR6tag|org.eventb.core.guard#_1CL9gGtlEeWJd8bCiR6tag"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPinspectionDisapproveq" org.eventb.core.parentSet="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poPredicateSet#EVTIDENTinspectionDisapproveq" org.eventb.core.poStamp="152">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="bag∈inspectionDisapproved" org.eventb.core.source="/baggages/machine04.bum|org.eventb.core.machineFile#machine04|org.eventb.core.event#_W5pcp2tlEeWJd8bCiR6tag|org.eventb.core.guard#_AJJT8G4QEeWBpLPBPB1y0w"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="HYPcontext0e" org.eventb.core.parentSet="/baggages/machine06.bpo|org.eventb.core.poFile#machine06|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="144">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="counters⊆Locations" org.eventb.core.source="/baggages/machine06.bum|org.eventb.core.machineFile#machine06|org.eventb.core.invariant#_1ih_YG2zEeWOg65G7XZUlg"/>

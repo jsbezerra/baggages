@@ -70,11 +70,11 @@
 <org.eventb.core.psStatus name="EXIT_DELIVERED_BAGGAGE_TO_CLAIM/CorrectlyDelivered/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="144" org.eventb.core.psManual="true"/>
 <org.eventb.core.psStatus name="EXIT_DELIVERED_BAGGAGE_TO_CLAIM/CorrectlyDeliveredToClaim/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="144" org.eventb.core.psManual="true"/>
 <org.eventb.core.psStatus name="EXIT_DELIVERED_BAGGAGE_TO_CLAIM/CorrectlyDeliveredToPlane/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="144" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="EXIT_NOT_DELIVERED_BAGGAGE/source/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="144" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="EXIT_NOT_DELIVERED_BAGGAGE/target/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="144" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="EXIT_NOT_DELIVERED_BAGGAGE/location/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="144" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="EXIT_NOT_DELIVERED_BAGGAGE/LocationKnown/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="144" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="EXIT_NOT_DELIVERED_BAGGAGE/CorrectlyDelivered/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="144" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="EXIT_NOT_DELIVERED_BAGGAGE/CorrectlyDeliveredToClaim/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="144" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="EXIT_NOT_DELIVERED_BAGGAGE/CorrectlyDeliveredToPlane/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="144" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="EXIT_NOT_DELIVERED_BAGGAGE/source/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="152" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="EXIT_NOT_DELIVERED_BAGGAGE/target/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="152" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="EXIT_NOT_DELIVERED_BAGGAGE/location/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="152" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="EXIT_NOT_DELIVERED_BAGGAGE/LocationKnown/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="152" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="EXIT_NOT_DELIVERED_BAGGAGE/CorrectlyDelivered/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="152" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="EXIT_NOT_DELIVERED_BAGGAGE/CorrectlyDeliveredToClaim/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="152" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="EXIT_NOT_DELIVERED_BAGGAGE/CorrectlyDeliveredToPlane/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="152" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>
