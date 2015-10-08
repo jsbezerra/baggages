@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="20">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="18">
+<org.eventb.core.poIdentifier name="Baggages" org.eventb.core.type="ℙ(Baggages)"/>
+<org.eventb.core.poPredicate name="Baggaget" org.eventb.core.predicate="¬finite(Baggages)" org.eventb.core.source="/baggages/context01.buc|org.eventb.core.contextFile#context01|org.eventb.core.axiom#_CQBVMWhPEeWccdfwySTGIg"/>
+<org.eventb.core.poIdentifier name="LocationTypes" org.eventb.core.type="ℙ(LocationTypes)"/>
+<org.eventb.core.poIdentifier name="airplane" org.eventb.core.type="LocationTypes"/>
+<org.eventb.core.poIdentifier name="claim" org.eventb.core.type="LocationTypes"/>
+<org.eventb.core.poIdentifier name="counter" org.eventb.core.type="LocationTypes"/>
+<org.eventb.core.poPredicate name="LocationTypet" org.eventb.core.predicate="LocationTypes={claim,counter,airplane}" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_Pi9csGxGEeWOQ5bHJpn5_w"/>
+<org.eventb.core.poPredicate name="LocationTypeu" org.eventb.core.predicate="partition(LocationTypes,{claim},{counter},{airplane})" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_YdaPMGxGEeWOQ5bHJpn5_w"/>
+<org.eventb.core.poPredicate name="LocationTypev" org.eventb.core.predicate="finite(LocationTypes)" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_daudwGxGEeWOQ5bHJpn5_w"/>
+<org.eventb.core.poIdentifier name="Locations" org.eventb.core.type="ℙ(Locations)"/>
+<org.eventb.core.poIdentifier name="c1" org.eventb.core.type="Locations"/>
+<org.eventb.core.poIdentifier name="c10" org.eventb.core.type="Locations"/>
+<org.eventb.core.poIdentifier name="c11" org.eventb.core.type="Locations"/>
+<org.eventb.core.poIdentifier name="c12" org.eventb.core.type="Locations"/>
+<org.eventb.core.poIdentifier name="c13" org.eventb.core.type="Locations"/>
+<org.eventb.core.poIdentifier name="c14" org.eventb.core.type="Locations"/>
+<org.eventb.core.poIdentifier name="c15" org.eventb.core.type="Locations"/>
+<org.eventb.core.poIdentifier name="c16" org.eventb.core.type="Locations"/>
+<org.eventb.core.poIdentifier name="c2" org.eventb.core.type="Locations"/>
+<org.eventb.core.poIdentifier name="c3" org.eventb.core.type="Locations"/>
+<org.eventb.core.poIdentifier name="c4" org.eventb.core.type="Locations"/>
+<org.eventb.core.poIdentifier name="c5" org.eventb.core.type="Locations"/>
+<org.eventb.core.poIdentifier name="c6" org.eventb.core.type="Locations"/>
+<org.eventb.core.poIdentifier name="c7" org.eventb.core.type="Locations"/>
+<org.eventb.core.poIdentifier name="c8" org.eventb.core.type="Locations"/>
+<org.eventb.core.poIdentifier name="c9" org.eventb.core.type="Locations"/>
+<org.eventb.core.poIdentifier name="cl1" org.eventb.core.type="Locations"/>
+<org.eventb.core.poIdentifier name="cl2" org.eventb.core.type="Locations"/>
+<org.eventb.core.poIdentifier name="cl3" org.eventb.core.type="Locations"/>
+<org.eventb.core.poIdentifier name="cl4" org.eventb.core.type="Locations"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/baggages/context06.bpo|org.eventb.core.poFile#context06|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="20">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="¬finite(Locations)" org.eventb.core.source="/baggages/context06.buc|org.eventb.core.contextFile#context06|org.eventb.core.axiom#_lSuv8W2zEeWOg65G7XZUlg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="{c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16,cl1,cl2,cl3,cl4}⊆Locations" org.eventb.core.source="/baggages/context06.buc|org.eventb.core.contextFile#context06|org.eventb.core.axiom#_7fy9IG21EeWOg65G7XZUlg"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="partition({c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16},{c1},{c2},{c3},{c4},{c5},{c6},{c7},{c8},{c9},{c10},{c11},{c12},{c13},{c14},{c15},{c16})" org.eventb.core.source="/baggages/context06.buc|org.eventb.core.contextFile#context06|org.eventb.core.axiom#_R8VboG22EeWOg65G7XZUlg"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="partition({cl1,cl2,cl3,cl4},{cl1},{cl2},{cl3},{cl4})" org.eventb.core.source="/baggages/context06.buc|org.eventb.core.contextFile#context06|org.eventb.core.axiom#_mJDzoG22EeWOg65G7XZUlg"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="partition({c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16,cl1,cl2,cl3,cl4},{c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16},{cl1,cl2,cl3,cl4})" org.eventb.core.source="/baggages/context06.buc|org.eventb.core.contextFile#context06|org.eventb.core.axiom#_tiuI0G22EeWOg65G7XZUlg"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

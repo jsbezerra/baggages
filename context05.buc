@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1444148665847" org.eventb.texttools.text_representation="context context05 extends context01&#10;&#10;sets LocationTypes&#10;&#10;constants claim counter airplane&#10;&#10;axioms&#10;&#9;@Loc LocationTypes = {claim, counter, airplane}&#10;&#9;@diff claim ≠ counter ∧ claim ≠ airplane ∧ counter ≠ airplane&#10;&#10;&#9;theorem @loc1 finite(LocationTypes)&#10;&#10;end&#10;" version="3">
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1444315230465" org.eventb.texttools.text_representation="context context05 extends context01&#10;&#10;sets LocationTypes&#10;&#10;constants claim counter airplane&#10;&#10;axioms&#10;&#9;@Loc LocationTypes = {claim, counter, airplane}&#10;&#9;@diff partition(LocationTypes, {claim}, {counter}, {airplane})&#10;&#10;&#9;theorem @loc1 finite(LocationTypes)&#10;&#10;end&#10;" version="3">
 <org.eventb.core.extendsContext name="_5pIpsGxFEeWOQ5bHJpn5_w" org.eventb.core.target="context01"/>
 <org.eventb.core.carrierSet name="_A3wzkGxGEeWOQ5bHJpn5_w" org.eventb.core.identifier="LocationTypes"/>
 <org.eventb.core.constant name="_EWY2kGxGEeWOQ5bHJpn5_w" org.eventb.core.identifier="claim"/>
 <org.eventb.core.constant name="_EWY2kWxGEeWOQ5bHJpn5_w" org.eventb.core.identifier="counter"/>
 <org.eventb.core.constant name="_EWY2kmxGEeWOQ5bHJpn5_w" org.eventb.core.identifier="airplane"/>
 <org.eventb.core.axiom name="_Pi9csGxGEeWOQ5bHJpn5_w" org.eventb.core.label="Loc" org.eventb.core.predicate="LocationTypes = {claim, counter, airplane}"/>
-<org.eventb.core.axiom name="_YdaPMGxGEeWOQ5bHJpn5_w" org.eventb.core.label="diff" org.eventb.core.predicate="claim ≠ counter ∧ claim ≠ airplane ∧ counter ≠ airplane"/>
+<org.eventb.core.axiom name="_YdaPMGxGEeWOQ5bHJpn5_w" org.eventb.core.label="diff" org.eventb.core.predicate="partition(LocationTypes, {claim}, {counter}, {airplane})"/>
 <org.eventb.core.axiom name="_daudwGxGEeWOQ5bHJpn5_w" org.eventb.core.label="loc1" org.eventb.core.predicate="finite(LocationTypes)" org.eventb.core.theorem="true"/>
 </org.eventb.core.contextFile>

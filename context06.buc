@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1444317285171" org.eventb.texttools.text_representation="context context06 extends context05&#10;&#10;sets Locations&#10;&#10;constants&#10;&#10;&#9;c1 c2 c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16 cl1 cl2 cl3 cl4&#10;&#10;axioms&#10;&#10;&#9;@infLocations ¬finite(Locations)&#10;&#9;@defAirportLocations {c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, cl1, cl2, cl3, cl4} ⊆ Locations&#10;&#10;&#9;@defCounters partition({c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16},&#10;&#9;&#9;{c1}, {c2}, {c3}, {c4}, {c5}, {c6}, {c7}, {c8}, {c9}, {c10}, {c11}, {c12}, {c13}, {c14}, {c15}, {c16})&#10;&#10;&#9;@defCLaims partition({cl1, cl2, cl3, cl4}, {cl1}, {cl2}, {cl3}, {cl4})&#10;&#10;&#9;@defLocations partition({c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, cl1, cl2, cl3, cl4},&#10;&#9;&#9;{c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16}, {cl1, cl2, cl3, cl4})&#10;&#10;end&#10;" version="3">
+<org.eventb.core.extendsContext name="_gD7IwG2zEeWOg65G7XZUlg" org.eventb.core.target="context05"/>
+<org.eventb.core.carrierSet name="_lSuv8G2zEeWOg65G7XZUlg" org.eventb.core.identifier="Locations"/>
+<org.eventb.core.axiom name="_lSuv8W2zEeWOg65G7XZUlg" org.eventb.core.label="infLocations" org.eventb.core.predicate="¬finite(Locations)"/>
+<org.eventb.core.constant name="_2DlMEG21EeWOg65G7XZUlg" org.eventb.core.identifier="c1"/>
+<org.eventb.core.constant name="_2DlMEW21EeWOg65G7XZUlg" org.eventb.core.identifier="c2"/>
+<org.eventb.core.constant name="_2DlMEm21EeWOg65G7XZUlg" org.eventb.core.identifier="c3"/>
+<org.eventb.core.constant name="_2DlME221EeWOg65G7XZUlg" org.eventb.core.identifier="c4"/>
+<org.eventb.core.constant name="_2DlMFG21EeWOg65G7XZUlg" org.eventb.core.identifier="c5"/>
+<org.eventb.core.constant name="_2DlMFW21EeWOg65G7XZUlg" org.eventb.core.identifier="c6"/>
+<org.eventb.core.constant name="_2DlMFm21EeWOg65G7XZUlg" org.eventb.core.identifier="c7"/>
+<org.eventb.core.constant name="_2DlMF221EeWOg65G7XZUlg" org.eventb.core.identifier="c8"/>
+<org.eventb.core.axiom name="_7fy9IG21EeWOg65G7XZUlg" org.eventb.core.label="defAirportLocations" org.eventb.core.predicate="{c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, cl1, cl2, cl3, cl4} ⊆ Locations"/>
+<org.eventb.core.axiom name="_R8VboG22EeWOg65G7XZUlg" org.eventb.core.label="defCounters" org.eventb.core.predicate="partition({c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16},&#10;&#9;&#9;{c1}, {c2}, {c3}, {c4}, {c5}, {c6}, {c7}, {c8}, {c9}, {c10}, {c11}, {c12}, {c13}, {c14}, {c15}, {c16})"/>
+<org.eventb.core.axiom name="_mJDzoG22EeWOg65G7XZUlg" org.eventb.core.label="defCLaims" org.eventb.core.predicate="partition({cl1, cl2, cl3, cl4}, {cl1}, {cl2}, {cl3}, {cl4})"/>
+<org.eventb.core.axiom name="_tiuI0G22EeWOg65G7XZUlg" org.eventb.core.label="defLocations" org.eventb.core.predicate="partition({c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, cl1, cl2, cl3, cl4},&#10;&#9;&#9;{c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16}, {cl1, cl2, cl3, cl4})"/>
+<org.eventb.core.constant name="_jaUTcG3MEeWMhKvwxzQnIQ" org.eventb.core.identifier="c9"/>
+<org.eventb.core.constant name="_jaUTcW3MEeWMhKvwxzQnIQ" org.eventb.core.identifier="c10"/>
+<org.eventb.core.constant name="_jaUTcm3MEeWMhKvwxzQnIQ" org.eventb.core.identifier="c11"/>
+<org.eventb.core.constant name="_jaUTc23MEeWMhKvwxzQnIQ" org.eventb.core.identifier="c12"/>
+<org.eventb.core.constant name="_jaUTdG3MEeWMhKvwxzQnIQ" org.eventb.core.identifier="c13"/>
+<org.eventb.core.constant name="_jaUTdW3MEeWMhKvwxzQnIQ" org.eventb.core.identifier="c14"/>
+<org.eventb.core.constant name="_jaUTdm3MEeWMhKvwxzQnIQ" org.eventb.core.identifier="c15"/>
+<org.eventb.core.constant name="_jaU6gG3MEeWMhKvwxzQnIQ" org.eventb.core.identifier="c16"/>
+<org.eventb.core.constant name="_jaU6gW3MEeWMhKvwxzQnIQ" org.eventb.core.identifier="cl1"/>
+<org.eventb.core.constant name="_jaU6gm3MEeWMhKvwxzQnIQ" org.eventb.core.identifier="cl2"/>
+<org.eventb.core.constant name="_jaU6g23MEeWMhKvwxzQnIQ" org.eventb.core.identifier="cl3"/>
+<org.eventb.core.constant name="_jaU6hG3MEeWMhKvwxzQnIQ" org.eventb.core.identifier="cl4"/>
+</org.eventb.core.contextFile>

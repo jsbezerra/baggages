@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1444318367228" org.eventb.texttools.text_representation="machine machine06 refines machine05 sees context06&#10;&#10;variables baggagesAtAirport deliveredBaggages notDeliveredBaggages inspectedBaggages notInspectedBaggages inspectionApproved&#10;&#9; inspectionDisapproved genericSource genericTarget deliveredToClaim deliveredToPlane&#10;&#10;&#9; counters claims airplanesAtAirport source target location&#10;&#10;invariants&#10;&#9;@defCounters counters ⊆ Locations&#10;&#9;@defClaim claims ⊆ Locations&#10;&#9;@defairplanesAtAirport airplanesAtAirport ⊆ Locations&#10;&#10;&#9;@defCounter2 counters = {cl1, cl2, cl3, cl4}&#10;&#9;@defClaim2 claims = {c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16}&#10;&#10;&#9;@exclusion (counters ∩ claims) = ∅ ∧ (counters ∩ airplanesAtAirport) = ∅ ∧ (claims ∩ airplanesAtAirport) = ∅&#10;&#9;@universality (counters ∪ claims ∪ airplanesAtAirport) ⊆ Locations&#10;&#10;&#9;@source source ∈ baggagesAtAirport → Locations&#10;&#9;@target target ∈ baggagesAtAirport → Locations&#10;&#10;&#9;@location location ∈ baggagesAtAirport → Locations&#10;&#10;&#9;@LocationKnown ∀b · b ∈ baggagesAtAirport ⇒ location(b) ∈ (counters ∪ claims ∪ airplanesAtAirport)&#10;&#10;&#9;@CorrectlyDelivered ∀b · b ∈ deliveredBaggages ⇒ (location(b) = target(b)) // Todas as bagagens foram entregues nos seus destinos&#10;&#9;@CorrectlyDeliveredToClaim ∀b · b ∈ deliveredBaggages ⇒ (genericTarget(b) = claim ⇒ location(b) ∈ claims)&#10;&#9;@CorrectlyDeliveredToPlane ∀b · b ∈ deliveredBaggages ⇒ (genericTarget(b) = airplane ⇒ location(b) ∈ airplanesAtAirport)&#10;&#10;&#10;&#9;//@CorrectlyDelivered1 ∀b · b ∈ baggagesAtAirport ∧ genericTarget(b) = claim ∧ b ∈ deliveredBaggages ⇒ location(b) ∈ claims&#10;&#10;&#9;//@bagDestination ∀b · b ∈ baggagesAtAirport ⇒ (genericTarget(b) = airplane ⇒ target(b) ∈ airplanesAtAirport) //Para qualquer bagagem no aeroporto, se a mala deve ir para um avião, o avião está no aeroporto&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10; &#9;then&#10; &#9;&#9;@init6_01 counters ≔ {cl1, cl2, cl3, cl4}&#10; &#9;&#9;@init6_02 claims ≔ {c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16}&#10; &#9;&#9;@init6_03 airplanesAtAirport ≔ ∅&#10; &#9;&#9;@init6_04 source ≔ ∅&#10; &#9;&#9;@init6_05 target ≔ ∅&#10; &#9;&#9;@init6_06 location ≔ ∅&#10;  end&#10;&#10;  event ENTER_BAGGAGE_COUNTER extends ENTER_BAGGAGE_COUNTER&#10;&#9;any c a&#10;&#9;where&#10;&#9;&#9;@grd6_01 c ∈ counters&#10;&#9;&#9;@grd6_02 a ∈ airplanesAtAirport&#10;  &#9;then&#10;&#9;&#9;@act6_01 source ≔ source  {bag ↦ c}&#10;&#9;&#9;@act6_02 target ≔ target  {bag ↦ a}&#10;&#9;&#9;@act6_03 location ≔ location  {bag ↦ c}&#10;  end&#10;&#10;  event ENTER_BAGGAGE_AIRPLANE_TO_AIRPLANE extends ENTER_BAGGAGE_AIRPLANE_TO_AIRPLANE&#10;  &#9;any a1 a2&#10;&#9;where&#10;&#9;&#9;@grd6_01 a1 ∈ airplanesAtAirport&#10;&#9;&#9;@grd6_02 a2 ∈ airplanesAtAirport&#10;  &#9;then&#10;&#9;&#9;@act6_01 source ≔ source  {bag ↦ a1}&#10;&#9;&#9;@act6_02 target ≔ target  {bag ↦ a2}&#10;&#9;&#9;@act6_03 location ≔ location  {bag ↦ a1}&#10;  end&#10;&#10;  event ENTER_BAGGAGE_AIRPLANE_TO_CLAIM extends ENTER_BAGGAGE_AIRPLANE_TO_CLAIM&#10;  &#9;any a cl&#10;&#9;where&#10;&#9;&#9;@grd6_01 a ∈ airplanesAtAirport&#10;&#9;&#9;@grd6_02 cl ∈ claims&#10;  &#9;then&#10;&#9;&#9;@act6_01 source ≔ source  {bag ↦ a}&#10;&#9;&#9;@act6_02 target ≔ target  {bag ↦ cl}&#10;&#9;&#9;@act6_03 location ≔ location  {bag ↦ a}&#10;  end&#10;&#10;  event ENTER_PLANE&#10;  &#9;any plane&#10;  &#9;where&#10;  &#9;&#9;@grd6_01 plane ∈ Locations&#10;  &#9;&#9;@grd6_02 plane ∉ (counters ∪ claims)&#10;  &#9;&#9;//@grd6_03 plane ∉ airplanesAtAirport&#10;  &#9;then&#10;  &#9;&#9;@act6_01 airplanesAtAirport ≔ airplanesAtAirport ∪ {plane}&#10;  end&#10;&#10;  event EXIT_PLANE&#10;  &#9;any plane&#10;  &#9;where&#10;  &#9;&#9;@grd6_01 plane ∈ airplanesAtAirport&#10;  &#9;&#9;@grd6_02 ¬(∃ b · b ∈ baggagesAtAirport ⇒ location(b) = plane)&#10;  &#9;&#9;@grd6_03 plane ∉ ran(target)&#10;  &#9;&#9;@grd6_04 plane ∉ ran(source)&#10;  &#9;then&#10;  &#9;&#9;@act6_01 airplanesAtAirport ≔ airplanesAtAirport ∖ {plane}&#10;  end&#10;&#10;  event INSPECT_APPROVE extends INSPECT_APPROVE&#10;  end&#10;&#10;  event INSPECT_DISAPPROVE extends INSPECT_DISAPPROVE&#10;  end&#10;&#10;  event DELIVER_TO_CLAIM extends DELIVER_TO_CLAIM&#10;  &#9;where&#10;  &#9;&#9;@grd6_01 target(bag) ∈ claims&#10;  &#9;then&#10;  &#9;&#9;@act6_01 location ≔ location  {bag ↦ target(bag)}&#10;  end&#10;&#10;  event DELIVER_TO_PLANE extends DELIVER_TO_PLANE&#10;  &#9;where&#10;  &#9;&#9;@grd6_01 target(bag) ∈ airplanesAtAirport&#10;  &#9;then&#10;  &#9;&#9;@act6_01 location ≔ location  {bag ↦ target(bag)}&#10;  end&#10;&#10;  event EXIT_DELIVERED_BAGGAGE_TO_PLANE extends EXIT_DELIVERED_BAGGAGE_TO_PLANE&#10;  &#9;then&#10;  &#9;&#9;@act6_01 source ≔ {bag} ⩤ source&#10;  &#9;&#9;@act6_02 target ≔ {bag} ⩤ target&#10;  &#9;&#9;@act6_03 location ≔ {bag} ⩤ location&#10;  end&#10;&#10;&#9;event EXIT_DELIVERED_BAGGAGE_TO_CLAIM extends EXIT_DELIVERED_BAGGAGE_TO_CLAIM&#10;  &#9;then&#10;  &#9;&#9;@act6_01 source ≔ {bag} ⩤ source&#10;  &#9;&#9;@act6_02 target ≔ {bag} ⩤ target&#10;  &#9;&#9;@act6_03 location ≔ {bag} ⩤ location&#10;  end&#10;&#10;  event EXIT_NOT_DELIVERED_BAGGAGE extends EXIT_NOT_DELIVERED_BAGGAGE&#10;  &#9;then&#10;  &#9;&#9;@act6_01 source ≔ {bag} ⩤ source&#10;  &#9;&#9;@act6_02 target ≔ {bag} ⩤ target&#10;  &#9;&#9;@act6_03 location ≔ {bag} ⩤ location&#10;  end&#10;&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="_8DMsgG2yEeWOg65G7XZUlg" org.eventb.core.target="machine05"/>
+<org.eventb.core.seesContext name="_1igxQG2zEeWOg65G7XZUlg" org.eventb.core.target="context06"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_HqD6kG22EeWOg65G7XZUlg" org.eventb.core.assignment="counters ≔ {cl1, cl2, cl3, cl4}" org.eventb.core.label="init6_01"/>
+<org.eventb.core.action name="_J3I2IG22EeWOg65G7XZUlg" org.eventb.core.assignment="claims ≔ {c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16}" org.eventb.core.label="init6_02"/>
+<org.eventb.core.action name="_dVkvUG23EeWOg65G7XZUlg" org.eventb.core.assignment="airplanesAtAirport ≔ ∅" org.eventb.core.label="init6_03"/>
+<org.eventb.core.action name="_zYuoAm24EeWOg65G7XZUlg" org.eventb.core.assignment="source ≔ ∅" org.eventb.core.label="init6_04"/>
+<org.eventb.core.action name="_zYuoA224EeWOg65G7XZUlg" org.eventb.core.assignment="target ≔ ∅" org.eventb.core.label="init6_05"/>
+<org.eventb.core.action name="_mydOkG25EeWOg65G7XZUlg" org.eventb.core.assignment="location ≔ ∅" org.eventb.core.label="init6_06"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="__e27EG2yEeWOg65G7XZUlg" org.eventb.core.identifier="baggagesAtAirport"/>
+<org.eventb.core.variable name="__e27EW2yEeWOg65G7XZUlg" org.eventb.core.identifier="deliveredBaggages"/>
+<org.eventb.core.variable name="__e3iIG2yEeWOg65G7XZUlg" org.eventb.core.identifier="notDeliveredBaggages"/>
+<org.eventb.core.variable name="__e3iIW2yEeWOg65G7XZUlg" org.eventb.core.identifier="inspectedBaggages"/>
+<org.eventb.core.variable name="__e3iIm2yEeWOg65G7XZUlg" org.eventb.core.identifier="notInspectedBaggages"/>
+<org.eventb.core.variable name="__e3iI22yEeWOg65G7XZUlg" org.eventb.core.identifier="inspectionApproved"/>
+<org.eventb.core.variable name="__e3iJG2yEeWOg65G7XZUlg" org.eventb.core.identifier="inspectionDisapproved"/>
+<org.eventb.core.variable name="__e3iJW2yEeWOg65G7XZUlg" org.eventb.core.identifier="genericSource"/>
+<org.eventb.core.variable name="__e3iJm2yEeWOg65G7XZUlg" org.eventb.core.identifier="genericTarget"/>
+<org.eventb.core.variable name="__e4JMG2yEeWOg65G7XZUlg" org.eventb.core.identifier="deliveredToClaim"/>
+<org.eventb.core.variable name="__e4JMW2yEeWOg65G7XZUlg" org.eventb.core.identifier="deliveredToPlane"/>
+<org.eventb.core.variable name="_wrU_4G2zEeWOg65G7XZUlg" org.eventb.core.identifier="counters"/>
+<org.eventb.core.variable name="_wrVm8G2zEeWOg65G7XZUlg" org.eventb.core.identifier="claims"/>
+<org.eventb.core.invariant name="_1ih_YG2zEeWOg65G7XZUlg" org.eventb.core.label="defCounters" org.eventb.core.predicate="counters ⊆ Locations"/>
+<org.eventb.core.invariant name="_5K5NMG2zEeWOg65G7XZUlg" org.eventb.core.label="defClaim" org.eventb.core.predicate="claims ⊆ Locations"/>
+<org.eventb.core.invariant name="_7LsnUG2zEeWOg65G7XZUlg" org.eventb.core.label="defairplanesAtAirport" org.eventb.core.predicate="airplanesAtAirport ⊆ Locations"/>
+<org.eventb.core.invariant name="_CtaFQG20EeWOg65G7XZUlg" org.eventb.core.label="defCounter2" org.eventb.core.predicate="counters = {cl1, cl2, cl3, cl4}"/>
+<org.eventb.core.invariant name="_NMtVsG20EeWOg65G7XZUlg" org.eventb.core.label="defClaim2" org.eventb.core.predicate="claims = {c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16}"/>
+<org.eventb.core.invariant name="_ankQ8G23EeWOg65G7XZUlg" org.eventb.core.label="exclusion" org.eventb.core.predicate="(counters ∩ claims) = ∅ ∧ (counters ∩ airplanesAtAirport) = ∅ ∧ (claims ∩ airplanesAtAirport) = ∅"/>
+<org.eventb.core.variable name="_cDHB4G23EeWOg65G7XZUlg" org.eventb.core.identifier="airplanesAtAirport"/>
+<org.eventb.core.invariant name="_ooMdoG24EeWOg65G7XZUlg" org.eventb.core.label="universality" org.eventb.core.predicate="(counters ∪ claims ∪ airplanesAtAirport) ⊆ Locations"/>
+<org.eventb.core.event name="_zYuoAG24EeWOg65G7XZUlg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ENTER_BAGGAGE_COUNTER">
+<org.eventb.core.refinesEvent name="_zYuoAW24EeWOg65G7XZUlg" org.eventb.core.target="ENTER_BAGGAGE_COUNTER"/>
+<org.eventb.core.parameter name="_9y7WAG24EeWOg65G7XZUlg" org.eventb.core.identifier="c"/>
+<org.eventb.core.parameter name="_sLE5EG25EeWOg65G7XZUlg" org.eventb.core.identifier="a"/>
+<org.eventb.core.guard name="_9y7WAW24EeWOg65G7XZUlg" org.eventb.core.label="grd6_01" org.eventb.core.predicate="c ∈ counters"/>
+<org.eventb.core.guard name="_sLE5EW25EeWOg65G7XZUlg" org.eventb.core.label="grd6_02" org.eventb.core.predicate="a ∈ airplanesAtAirport"/>
+<org.eventb.core.action name="_mydOkW25EeWOg65G7XZUlg" org.eventb.core.assignment="source ≔ source  {bag ↦ c}" org.eventb.core.label="act6_01"/>
+<org.eventb.core.action name="_8rBdVW25EeWOg65G7XZUlg" org.eventb.core.assignment="target ≔ target  {bag ↦ a}" org.eventb.core.label="act6_02"/>
+<org.eventb.core.action name="_8rBdVm25EeWOg65G7XZUlg" org.eventb.core.assignment="location ≔ location  {bag ↦ c}" org.eventb.core.label="act6_03"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_hF0b4G25EeWOg65G7XZUlg" org.eventb.core.identifier="source"/>
+<org.eventb.core.variable name="_hF0b4W25EeWOg65G7XZUlg" org.eventb.core.identifier="target"/>
+<org.eventb.core.invariant name="_hF1C8G25EeWOg65G7XZUlg" org.eventb.core.label="source" org.eventb.core.predicate="source ∈ baggagesAtAirport → Locations"/>
+<org.eventb.core.invariant name="_hF1C8W25EeWOg65G7XZUlg" org.eventb.core.label="target" org.eventb.core.predicate="target ∈ baggagesAtAirport → Locations"/>
+<org.eventb.core.event name="_8rA2QG25EeWOg65G7XZUlg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ENTER_BAGGAGE_AIRPLANE_TO_AIRPLANE">
+<org.eventb.core.refinesEvent name="_8rBdUG25EeWOg65G7XZUlg" org.eventb.core.target="ENTER_BAGGAGE_AIRPLANE_TO_AIRPLANE"/>
+<org.eventb.core.parameter name="_8rBdUW25EeWOg65G7XZUlg" org.eventb.core.identifier="a1"/>
+<org.eventb.core.parameter name="_8rBdUm25EeWOg65G7XZUlg" org.eventb.core.identifier="a2"/>
+<org.eventb.core.guard name="_8rBdU225EeWOg65G7XZUlg" org.eventb.core.label="grd6_01" org.eventb.core.predicate="a1 ∈ airplanesAtAirport"/>
+<org.eventb.core.guard name="_8rBdVG25EeWOg65G7XZUlg" org.eventb.core.label="grd6_02" org.eventb.core.predicate="a2 ∈ airplanesAtAirport"/>
+<org.eventb.core.action name="_PuMMQm26EeWOg65G7XZUlg" org.eventb.core.assignment="source ≔ source  {bag ↦ a1}" org.eventb.core.label="act6_01"/>
+<org.eventb.core.action name="_PuMMQ226EeWOg65G7XZUlg" org.eventb.core.assignment="target ≔ target  {bag ↦ a2}" org.eventb.core.label="act6_02"/>
+<org.eventb.core.action name="_DKTYc227EeWOg65G7XZUlg" org.eventb.core.assignment="location ≔ location  {bag ↦ a1}" org.eventb.core.label="act6_03"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_PuMMQG26EeWOg65G7XZUlg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ENTER_BAGGAGE_AIRPLANE_TO_CLAIM">
+<org.eventb.core.refinesEvent name="_PuMMQW26EeWOg65G7XZUlg" org.eventb.core.target="ENTER_BAGGAGE_AIRPLANE_TO_CLAIM"/>
+<org.eventb.core.parameter name="_XFE6QG26EeWOg65G7XZUlg" org.eventb.core.identifier="a"/>
+<org.eventb.core.parameter name="_XFE6QW26EeWOg65G7XZUlg" org.eventb.core.identifier="cl"/>
+<org.eventb.core.guard name="_XFE6Qm26EeWOg65G7XZUlg" org.eventb.core.label="grd6_01" org.eventb.core.predicate="a ∈ airplanesAtAirport"/>
+<org.eventb.core.guard name="_XFE6Q226EeWOg65G7XZUlg" org.eventb.core.label="grd6_02" org.eventb.core.predicate="cl ∈ claims"/>
+<org.eventb.core.action name="_TKHOom28EeWOg65G7XZUlg" org.eventb.core.assignment="source ≔ source  {bag ↦ a}" org.eventb.core.label="act6_01"/>
+<org.eventb.core.action name="_TKHOo228EeWOg65G7XZUlg" org.eventb.core.assignment="target ≔ target  {bag ↦ cl}" org.eventb.core.label="act6_02"/>
+<org.eventb.core.action name="_TKHOpG28EeWOg65G7XZUlg" org.eventb.core.assignment="location ≔ location  {bag ↦ a}" org.eventb.core.label="act6_03"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_DKTYcG27EeWOg65G7XZUlg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ENTER_PLANE">
+<org.eventb.core.parameter name="_DKTYcW27EeWOg65G7XZUlg" org.eventb.core.identifier="plane"/>
+<org.eventb.core.guard name="_DKTYcm27EeWOg65G7XZUlg" org.eventb.core.label="grd6_01" org.eventb.core.predicate="plane ∈ Locations"/>
+<org.eventb.core.guard name="_KDCK0G27EeWOg65G7XZUlg" org.eventb.core.comment="@grd6_03 plane ∉ airplanesAtAirport" org.eventb.core.label="grd6_02" org.eventb.core.predicate="plane ∉ (counters ∪ claims)"/>
+<org.eventb.core.action name="_vyjOsG28EeWOg65G7XZUlg" org.eventb.core.assignment="airplanesAtAirport ≔ airplanesAtAirport ∪ {plane}" org.eventb.core.label="act6_01"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_O7X9UG28EeWOg65G7XZUlg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="EXIT_PLANE">
+<org.eventb.core.parameter name="_UQgmQG3NEeWMhKvwxzQnIQ" org.eventb.core.identifier="plane"/>
+<org.eventb.core.guard name="_UaGgw23FEeWMhKvwxzQnIQ" org.eventb.core.label="grd6_01" org.eventb.core.predicate="plane ∈ airplanesAtAirport"/>
+<org.eventb.core.action name="_UaGgxm3FEeWMhKvwxzQnIQ" org.eventb.core.assignment="airplanesAtAirport ≔ airplanesAtAirport ∖ {plane}" org.eventb.core.label="act6_01"/>
+<org.eventb.core.guard name="_UqKHQm3LEeWMhKvwxzQnIQ" org.eventb.core.label="grd6_02" org.eventb.core.predicate="¬(∃ b · b ∈ baggagesAtAirport ⇒ location(b) = plane)"/>
+<org.eventb.core.guard name="_UQh0Ym3NEeWMhKvwxzQnIQ" org.eventb.core.label="grd6_03" org.eventb.core.predicate="plane ∉ ran(target)"/>
+<org.eventb.core.guard name="_qtH9QG3NEeWMhKvwxzQnIQ" org.eventb.core.label="grd6_04" org.eventb.core.predicate="plane ∉ ran(source)"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_O7YkYW28EeWOg65G7XZUlg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INSPECT_APPROVE">
+<org.eventb.core.refinesEvent name="_UQhNUG3NEeWMhKvwxzQnIQ" org.eventb.core.target="INSPECT_APPROVE"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="_o-4igG28EeWOg65G7XZUlg" org.eventb.core.label="location" org.eventb.core.predicate="location ∈ baggagesAtAirport → Locations"/>
+<org.eventb.core.variable name="_twOKkG28EeWOg65G7XZUlg" org.eventb.core.identifier="location"/>
+<org.eventb.core.invariant name="_BZU4IG29EeWOg65G7XZUlg" org.eventb.core.label="LocationKnown" org.eventb.core.predicate="∀b · b ∈ baggagesAtAirport ⇒ location(b) ∈ (counters ∪ claims ∪ airplanesAtAirport)"/>
+<org.eventb.core.invariant name="_-osC4G3EEeWMhKvwxzQnIQ" org.eventb.core.comment="Todas as bagagens foram entregues nos seus destinos" org.eventb.core.label="CorrectlyDelivered" org.eventb.core.predicate="∀b · b ∈ deliveredBaggages ⇒ (location(b) = target(b))"/>
+<org.eventb.core.invariant name="_EbuYgG3FEeWMhKvwxzQnIQ" org.eventb.core.label="CorrectlyDeliveredToClaim" org.eventb.core.predicate="∀b · b ∈ deliveredBaggages ⇒ (genericTarget(b) = claim ⇒ location(b) ∈ claims)"/>
+<org.eventb.core.event name="_UaGgwG3FEeWMhKvwxzQnIQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INSPECT_DISAPPROVE">
+<org.eventb.core.refinesEvent name="_UQhNUW3NEeWMhKvwxzQnIQ" org.eventb.core.target="INSPECT_DISAPPROVE"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_UqKHQG3LEeWMhKvwxzQnIQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="DELIVER_TO_CLAIM">
+<org.eventb.core.refinesEvent name="_UQh0YG3NEeWMhKvwxzQnIQ" org.eventb.core.target="DELIVER_TO_CLAIM"/>
+<org.eventb.core.guard name="_Kf_5AG3OEeWMhKvwxzQnIQ" org.eventb.core.label="grd6_01" org.eventb.core.predicate="target(bag) ∈ claims"/>
+<org.eventb.core.action name="_UqKHQ23LEeWMhKvwxzQnIQ" org.eventb.core.assignment="location ≔ location  {bag ↦ target(bag)}" org.eventb.core.label="act6_01"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="_f5YYwG3LEeWMhKvwxzQnIQ" org.eventb.core.comment="@CorrectlyDelivered1 ∀b · b ∈ baggagesAtAirport ∧ genericTarget(b) = claim ∧ b ∈ deliveredBaggages ⇒ location(b) ∈ claims&#10;@bagDestination ∀b · b ∈ baggagesAtAirport ⇒ (genericTarget(b) = airplane ⇒ target(b) ∈ airplanesAtAirport) //Para qualquer bagagem no aeroporto, se a mala deve ir para um avião, o avião está no aeroporto" org.eventb.core.label="CorrectlyDeliveredToPlane" org.eventb.core.predicate="∀b · b ∈ deliveredBaggages ⇒ (genericTarget(b) = airplane ⇒ location(b) ∈ airplanesAtAirport)"/>
+<org.eventb.core.event name="_wLHh4G3LEeWMhKvwxzQnIQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="DELIVER_TO_PLANE">
+<org.eventb.core.refinesEvent name="_UQh0YW3NEeWMhKvwxzQnIQ" org.eventb.core.target="DELIVER_TO_PLANE"/>
+<org.eventb.core.guard name="_f-p9gG3PEeWMhKvwxzQnIQ" org.eventb.core.label="grd6_01" org.eventb.core.predicate="target(bag) ∈ airplanesAtAirport"/>
+<org.eventb.core.action name="_OKhU4G3MEeWMhKvwxzQnIQ" org.eventb.core.assignment="location ≔ location  {bag ↦ target(bag)}" org.eventb.core.label="act6_01"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_HN8kUG3MEeWMhKvwxzQnIQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="EXIT_DELIVERED_BAGGAGE_TO_PLANE">
+<org.eventb.core.refinesEvent name="_UQh0Y23NEeWMhKvwxzQnIQ" org.eventb.core.target="EXIT_DELIVERED_BAGGAGE_TO_PLANE"/>
+<org.eventb.core.action name="_wLHh423LEeWMhKvwxzQnIQ" org.eventb.core.assignment="source ≔ {bag} ⩤ source" org.eventb.core.label="act6_01"/>
+<org.eventb.core.action name="_wLHh4m3LEeWMhKvwxzQnIQ" org.eventb.core.assignment="target ≔ {bag} ⩤ target" org.eventb.core.label="act6_02"/>
+<org.eventb.core.action name="_VlvJQ23MEeWMhKvwxzQnIQ" org.eventb.core.assignment="location ≔ {bag} ⩤ location" org.eventb.core.label="act6_03"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_VlvJQW3MEeWMhKvwxzQnIQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="EXIT_DELIVERED_BAGGAGE_TO_CLAIM">
+<org.eventb.core.refinesEvent name="_UQh0ZG3NEeWMhKvwxzQnIQ" org.eventb.core.target="EXIT_DELIVERED_BAGGAGE_TO_CLAIM"/>
+<org.eventb.core.action name="_OKhU4W3MEeWMhKvwxzQnIQ" org.eventb.core.assignment="source ≔ {bag} ⩤ source" org.eventb.core.label="act6_01"/>
+<org.eventb.core.action name="_2dCL4G3LEeWMhKvwxzQnIQ" org.eventb.core.assignment="target ≔ {bag} ⩤ target" org.eventb.core.label="act6_02"/>
+<org.eventb.core.action name="_VlvJRG3MEeWMhKvwxzQnIQ" org.eventb.core.assignment="location ≔ {bag} ⩤ location" org.eventb.core.label="act6_03"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_UQibcG3NEeWMhKvwxzQnIQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="EXIT_NOT_DELIVERED_BAGGAGE">
+<org.eventb.core.refinesEvent name="_UQibcW3NEeWMhKvwxzQnIQ" org.eventb.core.target="EXIT_NOT_DELIVERED_BAGGAGE"/>
+<org.eventb.core.action name="_VlvJRW3MEeWMhKvwxzQnIQ" org.eventb.core.assignment="source ≔ {bag} ⩤ source" org.eventb.core.label="act6_01"/>
+<org.eventb.core.action name="_OKhU4m3MEeWMhKvwxzQnIQ" org.eventb.core.assignment="target ≔ {bag} ⩤ target" org.eventb.core.label="act6_02"/>
+<org.eventb.core.action name="_077WwG3REeWMhKvwxzQnIQ" org.eventb.core.assignment="location ≔ {bag} ⩤ location" org.eventb.core.label="act6_03"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

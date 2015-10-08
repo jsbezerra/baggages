@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="9">
+<org.eventb.core.poFile org.eventb.core.poStamp="15">
 <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="3">
 <org.eventb.core.poIdentifier name="Baggages" org.eventb.core.type="ℙ(Baggages)"/>
 <org.eventb.core.poPredicate name="Baggaget" org.eventb.core.predicate="¬finite(Baggages)" org.eventb.core.source="/baggages/context01.buc|org.eventb.core.contextFile#context01|org.eventb.core.axiom#_CQBVMWhPEeWccdfwySTGIg"/>
@@ -8,17 +8,17 @@
 <org.eventb.core.poIdentifier name="claim" org.eventb.core.type="LocationTypes"/>
 <org.eventb.core.poIdentifier name="counter" org.eventb.core.type="LocationTypes"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="loc1/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="9">
+<org.eventb.core.poSequent name="loc1/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="11">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/baggages/context05.bpo|org.eventb.core.poFile#context05|org.eventb.core.poPredicateSet#HYPcontext03"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(LocationTypes)" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_daudwGxGEeWOQ5bHJpn5_w"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_daudwGxGEeWOQ5bHJpn5_w"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/baggages/context05.bpo|org.eventb.core.poFile#context05|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/baggages/context05.bpo|org.eventb.core.poFile#context05|org.eventb.core.poPredicateSet#HYPcontext03"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="HYPcontext03" org.eventb.core.parentSet="/baggages/context05.bpo|org.eventb.core.poFile#context05|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="HYPcontext03" org.eventb.core.parentSet="/baggages/context05.bpo|org.eventb.core.poFile#context05|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="11">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="LocationTypes={claim,counter,airplane}" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_Pi9csGxGEeWOQ5bHJpn5_w"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="claim≠counter∧claim≠airplane∧counter≠airplane" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_YdaPMGxGEeWOQ5bHJpn5_w"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="partition(LocationTypes,{claim},{counter},{airplane})" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_YdaPMGxGEeWOQ5bHJpn5_w"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/baggages/context05.bpo|org.eventb.core.poFile#context05|org.eventb.core.poPredicateSet#HYPcontext03" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/baggages/context05.bpo|org.eventb.core.poFile#context05|org.eventb.core.poPredicateSet#HYPcontext03" org.eventb.core.poStamp="15">
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="finite(LocationTypes)" org.eventb.core.source="/baggages/context05.buc|org.eventb.core.contextFile#context05|org.eventb.core.axiom#_daudwGxGEeWOQ5bHJpn5_w"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>
